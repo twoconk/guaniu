@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <ImageButton
-            android:id="@+id/story_back_to"
+            android:id="@+id/song_back_to"
             android:layout_marginLeft="16dp"
             android:layout_centerVertical="true"
             android:layout_width="20dp"
@@ -18,10 +18,10 @@
             android:scaleType="fitXY"/>
         <TextView
             android:layout_marginLeft="3dp"
-            android:layout_toRightOf="@+id/story_back_to"
+            android:layout_toRightOf="@+id/song_back_to"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="故事"
+            android:text="儿歌"
             android:layout_centerVertical="true"
             android:textColor="#000000"/>
         <ImageButton
@@ -34,10 +34,4 @@
             android:layout_height="20dp"
             android:src="@mipmap/find"/>
     </RelativeLayout>
-    <android.support.v4.view.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </android.support.v4.view.ViewPager>
-
 </LinearLayout>
