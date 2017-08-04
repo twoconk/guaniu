@@ -16,6 +16,7 @@
             android:src="@mipmap/home_bg" />
 
         <LinearLayout
+            android:id="@+id/story"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -27,12 +28,11 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/story"
-                    android:background="@null"
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:background="@null"
                     android:src="@mipmap/story" />
 
                 <TextView
@@ -44,17 +44,17 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/song"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/song"
-                    android:background="@null"
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:background="@null"
                     android:src="@mipmap/song" />
 
                 <TextView
@@ -66,17 +66,17 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/poem"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/poem"
-                    android:background="@null"
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:background="@null"
                     android:src="@mipmap/poem" />
 
                 <TextView
@@ -88,17 +88,17 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/music"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/music"
-                    android:background="@null"
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:background="@null"
                     android:src="@mipmap/music" />
 
                 <TextView
@@ -111,10 +111,10 @@
         </LinearLayout>
 
         <TextView
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#000000"/>
+            android:layout_marginTop="10dp"
+            android:background="#000000" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -233,10 +233,10 @@
         </LinearLayout>
 
         <TextView
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#000000"/>
+            android:layout_marginTop="10dp"
+            android:background="#000000" />
 
         <RelativeLayout
             android:layout_width="match_parent"

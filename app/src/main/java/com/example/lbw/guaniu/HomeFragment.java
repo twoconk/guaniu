@@ -8,16 +8,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+
+import com.example.lbw.guaniu.Music.MusicActivity;
+import com.example.lbw.guaniu.Poem.PoemActivity;
+import com.example.lbw.guaniu.Song.SongActivity;
+import com.example.lbw.guaniu.Story.StoryActivity;
 
 /**
  * Created by lbw on 2017/8/2.
  */
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
-    private ImageButton story;
-    private ImageButton song;
-    private ImageButton poem;
-    private ImageButton music;
+    private LinearLayout story;
+    private LinearLayout song;
+    private LinearLayout poem;
+    private LinearLayout music;
     private View view;
     @Nullable
     @Override
@@ -32,10 +38,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     }
 
     private void initView() {
-        story = (ImageButton)view.findViewById(R.id.story);
-        song = (ImageButton)view.findViewById(R.id.song);
-        poem = (ImageButton)view.findViewById(R.id.poem);
-        music = (ImageButton)view.findViewById(R.id.music);
+        story = (LinearLayout) view.findViewById(R.id.story);
+        song = (LinearLayout)view.findViewById(R.id.song);
+        poem = (LinearLayout)view.findViewById(R.id.poem);
+        music = (LinearLayout)view.findViewById(R.id.music);
     }
 
     @Override

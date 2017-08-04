@@ -17,10 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".WriteNews"/>
-        <activity android:name=".StoryActivity"/>
-        <activity android:name=".SongActivity"/>
-        <activity android:name=".PoemActivity"/>
-        <activity android:name=".MusicActivity"/>
+        <activity android:name=".Story.StoryActivity"/>
+        <activity android:name=".Song.SongActivity"/>
+        <activity android:name=".Poem.PoemActivity"/>
+        <activity android:name=".Music.MusicActivity"/>
     </application>
 
 </manifest>

@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ActivityCollector.AddActivity(this);
         initView();
         current = 0;
         fragmentManager = getSupportFragmentManager();
@@ -42,6 +44,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         discovery.setOnClickListener(this);
         me.setOnClickListener(this);
         add.setOnClickListener(this);
+        int[] a = {45,26,13,79,40,36,67,2};
+        Log.d("LBW1",Arrays.toString(sortArray(a)));
+    }
+
+    private int[] sortArray(int[] a) {
+        for(int i = 0;i < a.length -1;i++){
+            for (int j = 0;j<a.length - i -1;j++){
+                if (a[j] > a[j+1]){
+                    int tem = a[j];
+                    a[j ] = a[j+1];
+                    a[j+1] = tem;
+                }
+            }
+        }
+        return a;
     }
 
     private void initView() {
@@ -105,5 +122,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 discovery.setTextColor(Color.parseColor("#000000"));
                 break;
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ActivityCollector.remoreActivity(this);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK){
+            ActivityCollector.finishAll();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
