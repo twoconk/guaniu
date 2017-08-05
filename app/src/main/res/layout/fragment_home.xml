@@ -283,6 +283,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/music_detail_one"
                     android:layout_width="75dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
@@ -303,6 +304,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/music_detail_two"
                     android:layout_width="75dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
@@ -322,6 +324,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/music_detail_three"
                     android:layout_width="75dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
@@ -341,6 +344,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/music_detail_four"
                     android:layout_width="75dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"

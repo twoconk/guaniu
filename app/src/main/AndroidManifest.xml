@@ -21,6 +21,8 @@
         <activity android:name=".Song.SongActivity"/>
         <activity android:name=".Poem.PoemActivity"/>
         <activity android:name=".Music.MusicActivity"/>
+        <activity android:name=".Square.SquareActivity"/>
+        <activity android:name=".musicdetail.MuiscDetailActivity"/>
     </application>
 
 </manifest>

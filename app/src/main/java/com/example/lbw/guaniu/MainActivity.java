@@ -44,21 +44,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         discovery.setOnClickListener(this);
         me.setOnClickListener(this);
         add.setOnClickListener(this);
-        int[] a = {45,26,13,79,40,36,67,2};
-        Log.d("LBW1",Arrays.toString(sortArray(a)));
     }
 
-    private int[] sortArray(int[] a) {
-        for(int i = 0;i < a.length -1;i++){
-            for (int j = 0;j<a.length - i -1;j++){
-                if (a[j] > a[j+1]){
-                    int tem = a[j];
-                    a[j ] = a[j+1];
-                    a[j+1] = tem;
-                }
-            }
-        }
-        return a;
+        @Override
+        protected void onResume() {
+            super.onResume();
+            Intent intent = getIntent();
+            current = intent.getIntExtra("current",0);
+            changeFragment(current);
     }
 
     private void initView() {
