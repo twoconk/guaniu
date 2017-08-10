@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.lbw.guaniu.ActivityCollector;
+import com.example.lbw.guaniu.AddActivity;
+import com.example.lbw.guaniu.FindActivity;
 import com.example.lbw.guaniu.MainActivity;
 import com.example.lbw.guaniu.R;
 
@@ -29,16 +31,18 @@ import java.util.List;
 public class StoryActivity extends AppCompatActivity {
     private LinearLayout back;
     private List<Fragment> fragmentList;
+    private ImageButton find;
     private int bmpw = 0;//游标宽度
     private int offset = 0;//动画图片偏移量
     private int currIndex = 0;//当前页片标号
     private ImageView cursor;
+    private ImageView add;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story);
-        ActivityCollector.AddActivity(this);
+        ActivityCollector.addActivity(this);
         back = (LinearLayout)findViewById(R.id.story_back_to);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +60,22 @@ public class StoryActivity extends AppCompatActivity {
         StoryFragmentApadter apadter = new StoryFragmentApadter(getSupportFragmentManager(),fragmentList);
         viewPager.setOnPageChangeListener(new MyPagerChangeLister());
         viewPager.setAdapter(apadter);
-
+        find = (ImageButton)findViewById(R.id.find_story);
+        find.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StoryActivity.this, FindActivity.class);
+                startActivity(intent);
+            }
+        });
+        add = (ImageView)findViewById(R.id.add_story);
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StoryActivity.this, AddActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

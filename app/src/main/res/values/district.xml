@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="district">
+        <item>雁塔区</item>
+        <item>高新区</item>
+        <item>长安区</item>
+    </string-array>
+</resources>

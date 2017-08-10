@@ -12,6 +12,7 @@ import android.widget.ListView;
 
 import com.example.lbw.guaniu.ActivityCollector;
 import com.example.lbw.guaniu.MainActivity;
+import com.example.lbw.guaniu.MusicPlayerActivity;
 import com.example.lbw.guaniu.musicdetail.MuiscDetailActivity;
 import com.example.lbw.guaniu.R;
 import com.example.lbw.guaniu.WriteNews;
@@ -33,13 +34,13 @@ public class SquareActivity extends AppCompatActivity implements AdapterView.OnI
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_square);
-        ActivityCollector.AddActivity(this);
+        ActivityCollector.addActivity(this);
         back = (LinearLayout)findViewById(R.id.square_back_to);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SquareActivity.this,MainActivity.class);
-                intent.putExtra("current",1);
+                intent.putExtra("back_code",1);
                 startActivity(intent);
             }
         });
@@ -76,7 +77,10 @@ public class SquareActivity extends AppCompatActivity implements AdapterView.OnI
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Intent intent = new Intent(SquareActivity.this, MuiscDetailActivity.class);
-        startActivity(intent);
+        Square square = list.get(position);
+        if (square.getViewType() == 0){
+            Intent intent = new Intent(SquareActivity.this, MusicPlayerActivity.class);
+            startActivity(intent);
+        }
     }
 }

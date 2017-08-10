@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.example.lbw.guaniu.Square.SquareActivity;
+import com.example.lbw.guaniu.help.HelpActivity;
 
 /**
  * Created by lbw on 2017/8/2.
@@ -17,6 +18,7 @@ import com.example.lbw.guaniu.Square.SquareActivity;
 
 public class DiscoverFragment extends Fragment {
     private LinearLayout square;
+    private LinearLayout help;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -26,6 +28,14 @@ public class DiscoverFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), SquareActivity.class);
+                startActivity(intent);
+            }
+        });
+        help = (LinearLayout)view.findViewById(R.id.help);
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), HelpActivity.class);
                 startActivity(intent);
             }
         });

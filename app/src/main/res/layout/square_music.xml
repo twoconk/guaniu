@@ -87,6 +87,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"/>
         <ImageView
+            android:focusable="false"
+            android:id="@+id/zan_detail_music"
             android:layout_marginLeft="60dp"
             android:layout_width="25dp"
             android:layout_height="25dp"

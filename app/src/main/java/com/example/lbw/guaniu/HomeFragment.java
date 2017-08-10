@@ -13,8 +13,10 @@ import android.widget.LinearLayout;
 import com.example.lbw.guaniu.Music.MusicActivity;
 import com.example.lbw.guaniu.Poem.PoemActivity;
 import com.example.lbw.guaniu.Song.SongActivity;
+import com.example.lbw.guaniu.Square.SquareActivity;
 import com.example.lbw.guaniu.Story.StoryActivity;
 import com.example.lbw.guaniu.musicdetail.MuiscDetailActivity;
+import com.example.lbw.guaniu.personhome.PersonHome;
 
 /**
  * Created by lbw on 2017/8/2.
@@ -29,6 +31,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private ImageView image2;
     private ImageView image3;
     private ImageView image4;
+    private LinearLayout moerMusic;
+    private LinearLayout baby1;
+    private LinearLayout baby2;
+    private LinearLayout baby3;
+    private LinearLayout baby4;
     private View view;
     @Nullable
     @Override
@@ -43,6 +50,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         image2.setOnClickListener(this);
         image3.setOnClickListener(this);
         image4.setOnClickListener(this);
+        moerMusic.setOnClickListener(this);
+        baby1.setOnClickListener(this);
+        baby2.setOnClickListener(this);
+        baby3.setOnClickListener(this);
+        baby4.setOnClickListener(this);
         return view;
     }
 
@@ -55,6 +67,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         image2 = (ImageView)view.findViewById(R.id.music_detail_two);
         image3 = (ImageView)view.findViewById(R.id.music_detail_three);
         image4 = (ImageView)view.findViewById(R.id.music_detail_four);
+        moerMusic = (LinearLayout) view.findViewById(R.id.more_music);
+        baby1 = (LinearLayout)view.findViewById(R.id.baby1);
+        baby2 = (LinearLayout)view.findViewById(R.id.baby2);
+        baby3 = (LinearLayout)view.findViewById(R.id.baby3);
+        baby4 = (LinearLayout)view.findViewById(R.id.baby4);
     }
 
     @Override
@@ -77,20 +94,40 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 startActivity(intentMusic);
                 break;
             case R.id.music_detail_one:
-                Intent intentDetailOne = new Intent(getContext(),MuiscDetailActivity.class);
+                Intent intentDetailOne = new Intent(getContext(),MusicPlayerActivity.class);
                 startActivity(intentDetailOne);
                 break;
             case R.id.music_detail_two:
-                Intent intentDetailTwo = new Intent(getContext(),MuiscDetailActivity.class);
+                Intent intentDetailTwo = new Intent(getContext(),MusicPlayerActivity.class);
                 startActivity(intentDetailTwo);
                 break;
             case R.id.music_detail_three:
-                Intent intentDetailThree = new Intent(getContext(),MuiscDetailActivity.class);
+                Intent intentDetailThree = new Intent(getContext(),MusicPlayerActivity.class);
                 startActivity(intentDetailThree);
                 break;
             case R.id.music_detail_four:
-                Intent intentDetailFour = new Intent(getContext(),MuiscDetailActivity.class);
+                Intent intentDetailFour = new Intent(getContext(),MusicPlayerActivity.class);
                 startActivity(intentDetailFour);
+                break;
+            case R.id.more_music:
+                Intent intentSquare = new Intent(getContext(), SquareActivity.class);
+                startActivity(intentSquare);
+                break;
+            case R.id.baby1:
+                Intent intentBaby1 = new Intent(getContext(), PersonHome.class);
+                startActivity(intentBaby1);
+                break;
+            case R.id.baby2:
+                Intent intentBaby2 = new Intent(getContext(), PersonHome.class);
+                startActivity(intentBaby2);
+                break;
+            case R.id.baby3:
+                Intent intentBaby3 = new Intent(getContext(), PersonHome.class);
+                startActivity(intentBaby3);
+                break;
+            case R.id.baby4:
+                Intent intentBaby4 = new Intent(getContext(), PersonHome.class);
+                startActivity(intentBaby4);
                 break;
             default:
                 break;

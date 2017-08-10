@@ -66,11 +66,13 @@ public class StoryTraditionFragment extends Fragment {
     }
 
     private void initStories() {
-        Story huluwa = new Story("葫芦娃", "要读就读金典", R.mipmap.huluwa);
-        stories.add(huluwa);
-        Story qitiandashen = new Story("齐天大圣", "孙猴子闹天宫", R.mipmap.qitiandashen);
-        stories.add(qitiandashen);
-        Story sanguo = new Story("三国演义", "一个国家,三个人的历史", R.mipmap.sanguo);
-        stories.add(sanguo);
+        for(int i = 0; i < 3; i++) {
+            Story huluwa = new Story("葫芦娃", "要读就读金典", R.mipmap.huluwa);
+            stories.add(huluwa);
+            Story qitiandashen = new Story("齐天大圣", "孙猴子闹天宫", R.mipmap.qitiandashen);
+            stories.add(qitiandashen);
+            Story sanguo = new Story("三国演义", "一个国家,三个人的历史", R.mipmap.sanguo);
+            stories.add(sanguo);
+        }
     }
 }

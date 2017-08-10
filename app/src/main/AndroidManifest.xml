@@ -23,6 +23,18 @@
         <activity android:name=".Music.MusicActivity"/>
         <activity android:name=".Square.SquareActivity"/>
         <activity android:name=".musicdetail.MuiscDetailActivity"/>
+        <activity android:name=".personhome.PersonHome"/>
+        <activity android:name=".help.HelpActivity"/>
+        <activity android:name=".MusicPlayerActivity"/>
+        <activity android:name=".FindActivity"/>
+        <activity android:name=".help.HelpDetailActivity"/>
+        <activity android:name=".Music.MusicDiscussDetailActivity"/>
+        <activity android:name=".AddActivity"/>
+        <activity android:name=".me.RegisterActivity"/>
+        <activity android:name=".me.LoginActivity"/>
+        <activity android:name=".me.BaseInformationSettingActivity"/>
+        <activity android:name=".me.SchoolSettingActivity"/>
+        <activity android:name=".me.MyLetterActivity"/>
     </application>
 
 </manifest>

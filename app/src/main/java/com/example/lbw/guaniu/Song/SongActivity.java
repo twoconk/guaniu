@@ -12,6 +12,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.lbw.guaniu.ActivityCollector;
+import com.example.lbw.guaniu.FindActivity;
 import com.example.lbw.guaniu.MainActivity;
 import com.example.lbw.guaniu.R;
 
@@ -26,12 +27,13 @@ public class SongActivity extends AppCompatActivity {
     private LinearLayout back;
     private List<Song> songList;
     private SwipeRefreshLayout swipeRefresh;
+    private ImageButton find;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song);
-        ActivityCollector.AddActivity(this);
+        ActivityCollector.addActivity(this);
         back = (LinearLayout) findViewById(R.id.song_back_to);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +52,14 @@ public class SongActivity extends AppCompatActivity {
             public void onRefresh() {
                 Toast.makeText(SongActivity.this,"这是下拉刷新",Toast.LENGTH_SHORT).show();
                 refreshSong();
+            }
+        });
+        find = (ImageButton)findViewById(R.id.find_song);
+        find.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SongActivity.this, FindActivity.class);
+                startActivity(intent);
             }
         });
     }

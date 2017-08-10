@@ -75,6 +75,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"/>
         <ImageView
+            android:id="@+id/zan_detail_picture"
+            android:focusable="false"
             android:layout_marginLeft="30dp"
             android:layout_width="25dp"
             android:layout_height="25dp"
