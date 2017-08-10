@@ -1,6 +1,7 @@
 package com.example.lbw.guaniu.Square;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,7 +9,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.lbw.guaniu.Music.MusicDiscussDetailActivity;
 import com.example.lbw.guaniu.R;
+import com.example.lbw.guaniu.help.HelpDetailActivity;
 
 import java.util.List;
 
@@ -66,7 +69,7 @@ public class SquareAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder1 holder1 = null;
+        ViewHolder1 holder1 = null;;
         ViewHolder2 holder2 = null;
         ViewHolder3 holder3 = null;
         int type = getItemViewType(position);
@@ -81,6 +84,14 @@ public class SquareAdapter extends BaseAdapter {
                     holder1.zan = (TextView)convertView.findViewById(R.id.zan_music);
                     holder1.pinglun = (TextView)convertView.findViewById(R.id.pinglun_music);
                     holder1.time = (TextView)convertView.findViewById(R.id.time_music);
+                    holder1.zanDetail = (ImageView)convertView.findViewById(R.id.zan_detail_music);
+                    holder1.zanDetail.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(context,MusicDiscussDetailActivity.class);
+                            context.startActivity(intent);
+                        }
+                    });
                     convertView.setTag(holder1);
                     break;
                 case TYPE2:
@@ -92,6 +103,14 @@ public class SquareAdapter extends BaseAdapter {
                     holder2.zan = (TextView)convertView.findViewById(R.id.zan_picture);
                     holder2.pinglun = (TextView)convertView.findViewById(R.id.pinglun_picture);
                     holder2.time = (TextView)convertView.findViewById(R.id.time_picture);
+                    holder2.zanDetail = (ImageView)convertView.findViewById(R.id.zan_detail_picture);
+                    holder2.zanDetail.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(context,MusicDiscussDetailActivity.class);
+                            context.startActivity(intent);
+                        }
+                    });
                     convertView.setTag(holder2);
                     break;
                 case TYPE3:
@@ -103,6 +122,14 @@ public class SquareAdapter extends BaseAdapter {
                     holder3.zan = (TextView)convertView.findViewById(R.id.zan_video);
                     holder3.pinglun = (TextView)convertView.findViewById(R.id.pinglun_video);
                     holder3.time = (TextView)convertView.findViewById(R.id.time_video);
+                    holder3.zanDetail = (ImageView)convertView.findViewById(R.id.zan_detail_video);
+                    holder3.zanDetail.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(context,MusicDiscussDetailActivity.class);
+                            context.startActivity(intent);
+                        }
+                    });
                     convertView.setTag(holder3);
                     break;
                 default:
@@ -157,6 +184,7 @@ public class SquareAdapter extends BaseAdapter {
         TextView zan;
         TextView pinglun;
         TextView time;
+        ImageView zanDetail;
     }
     class ViewHolder2 {
         ImageView image;
@@ -165,6 +193,7 @@ public class SquareAdapter extends BaseAdapter {
         TextView zan;
         TextView pinglun;
         TextView time;
+        ImageView zanDetail;
     }
     class ViewHolder3 {
         ImageView image;
@@ -173,5 +202,6 @@ public class SquareAdapter extends BaseAdapter {
         TextView zan;
         TextView pinglun;
         TextView time;
+        ImageView zanDetail;
     }
 }

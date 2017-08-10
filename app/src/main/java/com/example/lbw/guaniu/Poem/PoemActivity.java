@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.lbw.guaniu.ActivityCollector;
+import com.example.lbw.guaniu.AddActivity;
+import com.example.lbw.guaniu.FindActivity;
 import com.example.lbw.guaniu.MainActivity;
 import com.example.lbw.guaniu.R;
 import com.example.lbw.guaniu.Story.StoryFragmentApadter;
@@ -34,11 +36,13 @@ public class PoemActivity extends AppCompatActivity {
     private int offset = 0;//动画图片偏移量
     private int currIndex = 0;//当前页片标号
     private ImageView cursor;
+    private ImageButton find;
+    private ImageView add;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_poem);
-        ActivityCollector.AddActivity(this);
+        ActivityCollector.addActivity(this);
         back = (LinearLayout)findViewById(R.id.poem_back_to);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,10 +56,27 @@ public class PoemActivity extends AppCompatActivity {
         fragmentList.add(new PoemTangshiFragment());
         fragmentList.add(new PoemSongciFragment());
         fragmentList.add(new PoemTraditionFragment());
+        fragmentList.add(new PoemTraditionFragment());
         ViewPager viewPager = (ViewPager)findViewById(R.id.poem_view_pager);
         StoryFragmentApadter apadter = new StoryFragmentApadter(getSupportFragmentManager(),fragmentList);
         viewPager.setOnPageChangeListener(new PoemActivity.MyPagerChangeLister());
         viewPager.setAdapter(apadter);
+        find = (ImageButton)findViewById(R.id.find_poem);
+        find.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PoemActivity.this, FindActivity.class);
+                startActivity(intent);
+            }
+        });
+        add = (ImageView)findViewById(R.id.add_poem);
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PoemActivity.this, AddActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -69,8 +90,8 @@ public class PoemActivity extends AppCompatActivity {
         bmpw = 60;
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
-        int screenW = dm.widthPixels/3;
-        offset = (screenW/3 - bmpw)/2;
+        int screenW = dm.widthPixels/4;
+        offset = ((screenW / 3) * 2 - bmpw)/2;
         Matrix matrix = new Matrix();
         matrix.postTranslate(offset,0);
         cursor.setImageMatrix(matrix);
@@ -79,7 +100,7 @@ public class PoemActivity extends AppCompatActivity {
     public class MyPagerChangeLister implements ViewPager.OnPageChangeListener {
         int one = offset * 2 + bmpw;
         int two = one * 2;
-
+        int three = one * 3;
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -94,6 +115,8 @@ public class PoemActivity extends AppCompatActivity {
                         animation = new TranslateAnimation(one, 0, 0, 0);
                     } else if (currIndex == 2) {
                         animation = new TranslateAnimation(two, 0, 0, 0);
+                    }else if (currIndex == 3){
+                        animation = new TranslateAnimation(three,0,0,0);
                     }
                     break;
                 case 1:
@@ -101,6 +124,8 @@ public class PoemActivity extends AppCompatActivity {
                         animation = new TranslateAnimation(offset, one, 0, 0);
                     } else if (currIndex == 2) {
                         animation = new TranslateAnimation(two, one, 0, 0);
+                    }else if (currIndex == 3){
+                        animation = new TranslateAnimation(three,one,0,0);
                     }
                     break;
                 case 2:
@@ -108,6 +133,17 @@ public class PoemActivity extends AppCompatActivity {
                         animation = new TranslateAnimation(offset, two, 0, 0);
                     } else if (currIndex == 1) {
                         animation = new TranslateAnimation(one, two, 0, 0);
+                    }else if (currIndex == 3){
+                        animation = new TranslateAnimation(three,two,0,0);
+                    }
+                    break;
+                case 3:
+                    if (currIndex == 0){
+                        animation = new TranslateAnimation(offset,three,0,0);
+                    }else if (currIndex == 1){
+                        animation = new TranslateAnimation(one,three,0,0);
+                    }else if (currIndex == 2){
+                        animation = new TranslateAnimation(two,three,0,0);
                     }
                     break;
                 default:

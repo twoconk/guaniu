@@ -48,10 +48,10 @@
         android:background="#000000"/>
 
     <ListView
+        android:layout_marginTop="3dp"
         android:id="@+id/square_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
     </ListView>
 
 </LinearLayout>
