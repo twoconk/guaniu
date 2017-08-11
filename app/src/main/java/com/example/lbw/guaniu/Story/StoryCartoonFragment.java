@@ -1,5 +1,6 @@
 package com.example.lbw.guaniu.Story;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -7,9 +8,11 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.lbw.guaniu.DetailsActivity;
 import com.example.lbw.guaniu.R;
 
 import java.util.ArrayList;
@@ -42,6 +45,13 @@ public class StoryCartoonFragment extends Fragment {
                 refreshStory();
             }
         });
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getContext(), DetailsActivity.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 
@@ -63,6 +73,7 @@ public class StoryCartoonFragment extends Fragment {
 
             }
         }).start();
+
     }
 
     private void initStories() {

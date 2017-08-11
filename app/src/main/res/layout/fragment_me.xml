@@ -117,6 +117,7 @@
         android:layout_height="1dp"
         android:background="#000000"/>
     <RelativeLayout
+        android:id="@+id/my_friends"
         android:layout_width="match_parent"
         android:layout_height="50dp">
 
@@ -143,6 +144,7 @@
         android:layout_height="1dp"
         android:background="#000000"/>
     <RelativeLayout
+        android:id="@+id/my_friends_news"
         android:layout_width="match_parent"
         android:layout_height="50dp">
 

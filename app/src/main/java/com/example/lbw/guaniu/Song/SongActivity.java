@@ -6,12 +6,14 @@ import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.lbw.guaniu.ActivityCollector;
+import com.example.lbw.guaniu.DetailsActivity;
 import com.example.lbw.guaniu.FindActivity;
 import com.example.lbw.guaniu.MainActivity;
 import com.example.lbw.guaniu.R;
@@ -59,6 +61,13 @@ public class SongActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SongActivity.this, FindActivity.class);
+                startActivity(intent);
+            }
+        });
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(SongActivity.this, DetailsActivity.class);
                 startActivity(intent);
             }
         });

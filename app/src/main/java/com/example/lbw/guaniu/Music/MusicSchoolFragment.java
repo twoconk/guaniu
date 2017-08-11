@@ -1,5 +1,6 @@
 package com.example.lbw.guaniu.Music;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -7,9 +8,11 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.lbw.guaniu.DetailsActivity;
 import com.example.lbw.guaniu.R;
 import com.example.lbw.guaniu.Story.Story;
 import com.example.lbw.guaniu.Story.StoryListAdapter;
@@ -41,6 +44,13 @@ public class MusicSchoolFragment extends Fragment {
             public void onRefresh() {
                 Toast.makeText(getContext(),"这是下拉刷新",Toast.LENGTH_SHORT).show();
                 refreshStory();
+            }
+        });
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getContext(), DetailsActivity.class);
+                startActivity(intent);
             }
         });
         return view;

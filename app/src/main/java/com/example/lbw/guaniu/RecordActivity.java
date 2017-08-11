@@ -1,41 +1,43 @@
 package com.example.lbw.guaniu;
 
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
-
-import com.example.lbw.guaniu.Square.SquareActivity;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 /**
- * Created by lbw on 2017/8/3.
+ * Created by lbw on 2017/8/11.
  */
 
-public class WriteNews extends AppCompatActivity {
-    private ImageButton backToSquare;
+public class RecordActivity extends AppCompatActivity {
+    private TextView text;
+    private LinearLayout back;
     private Button record;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_write_news);
         ActivityCollector.addActivity(this);
-        backToSquare = (ImageButton)findViewById(R.id.back_to_square);
-        backToSquare.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_record);
+        text = (TextView)findViewById(R.id.record_text);
+        text.setText("春晓_百度汉语" + "\n" + "作者:孟浩然" + "\n" + "春眠不觉晓,处处闻啼鸟" + "\n" + "夜来风雨声,花落知多少");
+        back = (LinearLayout)findViewById(R.id.back_to_writer_news);
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(WriteNews.this, SquareActivity.class);
+                Intent intent = new Intent(RecordActivity.this,WriteNews.class);
                 startActivity(intent);
             }
         });
-        record = (Button)findViewById(R.id.record);
+        record = (Button)findViewById(R.id.go_to_record);
         record.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(WriteNews.this,RecordActivity.class);
+                record.setText("完成");
+                Intent intent = new Intent(RecordActivity.this,EnsureRecordActivity.class);
                 startActivity(intent);
             }
         });
