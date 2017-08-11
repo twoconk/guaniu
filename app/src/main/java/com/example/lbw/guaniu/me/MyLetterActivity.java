@@ -1,8 +1,12 @@
 package com.example.lbw.guaniu.me;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.example.lbw.guaniu.ActivityCollector;
@@ -18,6 +22,7 @@ import java.util.List;
 public class MyLetterActivity extends AppCompatActivity {
     private ListView listView;
     private List<Letter> list;
+    private LinearLayout back;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +32,20 @@ public class MyLetterActivity extends AppCompatActivity {
         listView = (ListView)findViewById(R.id.my_letter_list);
         MyLetterListAdapter adapter = new MyLetterListAdapter(MyLetterActivity.this,R.layout.letter_item,list);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MyLetterActivity.this,MyLetterDetailActivity.class);
+                startActivity(intent);
+            }
+        });
+        back = (LinearLayout)findViewById(R.id.back_to_me_form_letter);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void initData() {

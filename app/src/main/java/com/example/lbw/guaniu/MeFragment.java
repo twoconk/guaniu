@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
+import com.example.lbw.guaniu.Square.SquareActivity;
 import com.example.lbw.guaniu.me.BaseInformationSettingActivity;
 import com.example.lbw.guaniu.me.LoginActivity;
 import com.example.lbw.guaniu.me.MyLetterActivity;
@@ -25,6 +26,8 @@ public class MeFragment extends Fragment implements View.OnClickListener{
     private Button login;
     private RelativeLayout informationSetting;
     private RelativeLayout myLetter;
+    private RelativeLayout myFriendsNews;
+    private RelativeLayout myFriends;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -34,6 +37,8 @@ public class MeFragment extends Fragment implements View.OnClickListener{
         login.setOnClickListener(this);
         informationSetting.setOnClickListener(this);
         myLetter.setOnClickListener(this);
+        myFriendsNews.setOnClickListener(this);
+        myFriends.setOnClickListener(this);
         return view;
     }
 
@@ -42,6 +47,8 @@ public class MeFragment extends Fragment implements View.OnClickListener{
         login = (Button)view.findViewById(R.id.login);
         informationSetting = (RelativeLayout)view.findViewById(R.id.information_setting);
         myLetter = (RelativeLayout)view.findViewById(R.id.my_letter);
+        myFriendsNews = (RelativeLayout)view.findViewById(R.id.my_friends_news);
+        myFriends = (RelativeLayout)view.findViewById(R.id.my_friends);
     }
 
     @Override
@@ -62,7 +69,17 @@ public class MeFragment extends Fragment implements View.OnClickListener{
             case R.id.my_letter:
                 Intent intentMyLetter = new Intent(getContext(), MyLetterActivity.class);
                 startActivity(intentMyLetter);
+                break;
+            case R.id.my_friends_news:
+                Intent intentMyFriendNews = new Intent(getContext(), SquareActivity.class);
+                startActivity(intentMyFriendNews);
+                break;
+            case R.id.my_friends:
+                Intent intentMyFriend = new Intent(getContext(), MyFriendActivity.class);
+                startActivity(intentMyFriend);
+                break;
             default:
+
                 break;
         }
     }

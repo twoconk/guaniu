@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/back_to_home_form_my_friend"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="我的好友"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="3"
+        android:orientation="horizontal">
+
+        <com.example.lbw.guaniu.RoundImageView
+            android:id="@+id/friend_1"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/child1" />
+
+        <com.example.lbw.guaniu.RoundImageView
+            android:id="@+id/friend_2"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/child2" />
+
+        <com.example.lbw.guaniu.RoundImageView
+            android:id="@+id/friend_3"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/child3" />
+
+        <TextView
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:text="张瑶" />
+
+        <TextView
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:text="小米" />
+
+        <TextView
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:text="红玉" />
+
+        <com.example.lbw.guaniu.RoundImageView
+            android:id="@+id/friend_4"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/child1" />
+
+        <com.example.lbw.guaniu.RoundImageView
+            android:id="@+id/friend_5"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/child2" />
+
+        <com.example.lbw.guaniu.RoundImageView
+            android:id="@+id/friend_6"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/child3" />
+
+        <TextView
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:text="张瑶" />
+
+        <TextView
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:text="小米" />
+
+        <TextView
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:text="红玉" />
+
+        <com.example.lbw.guaniu.RoundImageView
+            android:id="@+id/friend_7"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/child1" />
+
+        <com.example.lbw.guaniu.RoundImageView
+            android:id="@+id/friend_8"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/child2" />
+
+        <com.example.lbw.guaniu.RoundImageView
+            android:id="@+id/friend_9"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/child3" />
+
+        <TextView
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:text="张瑶" />
+
+        <TextView
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:text="小米" />
+
+        <TextView
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:text="红玉" />
+
+
+    </GridLayout>
+
+
+</LinearLayout>

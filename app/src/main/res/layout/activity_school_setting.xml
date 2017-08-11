@@ -5,25 +5,32 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/back_to_information_setting"
+
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="16dp"
-            android:src="@mipmap/back" />
-
-        <TextView
+        <LinearLayout
+            android:id="@+id/back_to_information_setting"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="5dp"
-            android:text="学校设置"
-            android:textColor="#000000" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:src="@mipmap/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="学校设置"
+                android:textColor="#000000" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/save"
@@ -41,124 +48,130 @@
         android:background="#000000" />
 
     <LinearLayout
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/primary"
-            android:layout_marginLeft="16dp"
-            android:layout_gravity="center_vertical"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <RadioButton
                 android:id="@+id/primary_rodio"
-                android:focusable="false"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_marginLeft="15dp"
-                android:textColor="#000000"
-                android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="小学" />
+                android:focusable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="小学"
+                android:textColor="#000000"
+                android:textSize="18sp" />
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/junior"
-            android:layout_marginLeft="16dp"
-            android:layout_gravity="center_vertical"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <RadioButton
                 android:id="@+id/junior_rodio"
-                android:focusable="false"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_marginLeft="15dp"
-                android:textColor="#000000"
-                android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="初中" />
+                android:focusable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="初中"
+                android:textColor="#000000"
+                android:textSize="18sp" />
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/high"
-            android:layout_marginLeft="16dp"
-            android:layout_gravity="center_vertical"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <RadioButton
                 android:id="@+id/high_rodio"
-                android:focusable="false"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_marginLeft="15dp"
-                android:textColor="#000000"
-                android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="高中" />
+                android:focusable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="高中"
+                android:textColor="#000000"
+                android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="90dp"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="35dp">
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
         <Spinner
             android:id="@+id/province_spinner"
-            android:entries="@array/province"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:entries="@array/province">
 
         </Spinner>
+
         <Spinner
-            android:entries="@array/city"
             android:id="@+id/city_spinner"
-            android:layout_marginLeft="30dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:entries="@array/city">
 
         </Spinner>
+
         <Spinner
-            android:entries="@array/district"
             android:id="@+id/district_spinner"
-            android:layout_marginLeft="30dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:entries="@array/district">
 
         </Spinner>
     </LinearLayout>
+
     <EditText
-        android:hint="大雁塔小学"
-        android:background="@drawable/edit"
-        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="90dp"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="35dp" />
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit"
+        android:hint="大雁塔小学"
+        android:orientation="horizontal" />
 
 </LinearLayout>

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
-        android:id="@+id/back_to_help"
+        android:id="@+id/back_to_square_from_my_letter_detail"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:orientation="horizontal">
@@ -52,26 +52,20 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
     <TextView
-        android:id="@+id/help_detail_text"
+        android:id="@+id/my_letter_detail_text"
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
     <TextView
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="16dp"
-        android:text="回答45条"
-        android:textSize="18dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="60dp"
         android:layout_marginLeft="16dp"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#000000"/>
     <ListView
-        android:id="@+id/answer_list"
+        android:id="@+id/my_letter_detail_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
@@ -94,11 +88,11 @@
         <Button
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
-            android:id="@+id/release"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:background="@drawable/edit"
             android:text="回复"/>
 
     </LinearLayout>
+
 </LinearLayout>

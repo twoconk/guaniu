@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:id="@+id/back_to_me_form_setting"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:orientation="horizontal">
 
