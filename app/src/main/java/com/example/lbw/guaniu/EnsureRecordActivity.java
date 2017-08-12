@@ -37,7 +37,8 @@ public class EnsureRecordActivity extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                DialogEditFragment dialogEditFragment = new DialogEditFragment();
+                dialogEditFragment.show(getFragmentManager(),"DialogEditFragment");
             }
         });
         back = (LinearLayout)findViewById(R.id.back_to_record);

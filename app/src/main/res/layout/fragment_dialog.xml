@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:background="@drawable/edit"
+    android:layout_height="150dp">
+    <TextView
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:text="取个好听的名字"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_marginTop="20dp"
+        android:hint="春晓"
+        android:background="@drawable/edit"
+        android:layout_marginLeft="16dp"
+        android:layout_width="268dp"
+        android:layout_height="30dp" />
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"/>
+    <LinearLayout
+        android:orientation="horizontal"
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"/>
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#000000"/>
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:text="提交"
+            android:id="@+id/commit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"/>
+    </LinearLayout>
+
+</LinearLayout>

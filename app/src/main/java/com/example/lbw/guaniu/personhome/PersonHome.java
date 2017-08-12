@@ -6,12 +6,14 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.example.lbw.guaniu.ActivityCollector;
 import com.example.lbw.guaniu.MusicPlayerActivity;
 import com.example.lbw.guaniu.R;
+import com.example.lbw.guaniu.WriteLetterActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +26,7 @@ public class PersonHome extends AppCompatActivity {
     private List<MyNews> list;
     private ListView listView;
     private LinearLayout back;
+    private Button writeLetter;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +47,14 @@ public class PersonHome extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(PersonHome.this, MusicPlayerActivity.class);
+                startActivity(intent);
+            }
+        });
+        writeLetter = (Button)findViewById(R.id.write_letter);
+        writeLetter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PersonHome.this,WriteLetterActivity.class);
                 startActivity(intent);
             }
         });

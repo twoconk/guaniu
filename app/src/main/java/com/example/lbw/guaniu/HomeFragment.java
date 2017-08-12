@@ -36,6 +36,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private LinearLayout baby2;
     private LinearLayout baby3;
     private LinearLayout baby4;
+    private LinearLayout moreRecommend;
     private View view;
     @Nullable
     @Override
@@ -55,6 +56,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         baby2.setOnClickListener(this);
         baby3.setOnClickListener(this);
         baby4.setOnClickListener(this);
+        moreRecommend.setOnClickListener(this);
         return view;
     }
 
@@ -72,6 +74,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         baby2 = (LinearLayout)view.findViewById(R.id.baby2);
         baby3 = (LinearLayout)view.findViewById(R.id.baby3);
         baby4 = (LinearLayout)view.findViewById(R.id.baby4);
+        moreRecommend = (LinearLayout)view.findViewById(R.id.more_recommend);
     }
 
     @Override
@@ -128,6 +131,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             case R.id.baby4:
                 Intent intentBaby4 = new Intent(getContext(), PersonHome.class);
                 startActivity(intentBaby4);
+                break;
+            case R.id.more_recommend:
+                Intent intentMoreRecommend = new Intent(getContext(),MoreRecommendActivity.class);
+                startActivity(intentMoreRecommend);
                 break;
             default:
                 break;
