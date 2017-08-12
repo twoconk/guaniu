@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+        android:textColor="#000000"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:text="小明星"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:background="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="3"
+            android:orientation="horizontal">
+
+            <com.example.lbw.guaniu.RoundImageView
+                android:id="@+id/friend_1_0"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/child1" />
+
+            <com.example.lbw.guaniu.RoundImageView
+                android:id="@+id/friend_2_0"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/child2" />
+
+            <com.example.lbw.guaniu.RoundImageView
+                android:id="@+id/friend_3_0"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/child3" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:text="张瑶" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:text="小米" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:text="红玉" />
+
+            <com.example.lbw.guaniu.RoundImageView
+                android:id="@+id/friend_4_0"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/child1" />
+
+            <com.example.lbw.guaniu.RoundImageView
+                android:id="@+id/friend_5_0"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/child2" />
+
+            <com.example.lbw.guaniu.RoundImageView
+                android:id="@+id/friend_6_0"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/child3" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:text="张瑶" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:text="小米" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:text="红玉" />
+
+            <com.example.lbw.guaniu.RoundImageView
+                android:id="@+id/friend_7_0"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/child1" />
+
+            <com.example.lbw.guaniu.RoundImageView
+                android:id="@+id/friend_8_0"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/child2" />
+
+            <com.example.lbw.guaniu.RoundImageView
+                android:id="@+id/friend_9_0"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/child3" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:text="张瑶" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:text="小米" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:text="红玉" />
+
+
+        </GridLayout>
+        <TextView
+            android:textColor="#000000"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="16dp"
+            android:text="推荐宝宝"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:background="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="3"
+            android:orientation="horizontal">
+
+            <com.example.lbw.guaniu.RoundImageView
+                android:id="@+id/friend_1_1"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/child1" />
+
+            <com.example.lbw.guaniu.RoundImageView
+                android:id="@+id/friend_2_1"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/child2" />
+
+            <com.example.lbw.guaniu.RoundImageView
+                android:id="@+id/friend_3_1"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/child3" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:text="张瑶" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:text="小米" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:text="红玉" />
+
+            <com.example.lbw.guaniu.RoundImageView
+                android:id="@+id/friend_4_1"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/child1" />
+
+            <com.example.lbw.guaniu.RoundImageView
+                android:id="@+id/friend_5_1"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/child2" />
+
+            <com.example.lbw.guaniu.RoundImageView
+                android:id="@+id/friend_6_1"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/child3" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:text="张瑶" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:text="小米" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:text="红玉" />
+
+            <com.example.lbw.guaniu.RoundImageView
+                android:id="@+id/friend_7_1"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/child1" />
+
+            <com.example.lbw.guaniu.RoundImageView
+                android:id="@+id/friend_8_1"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/child2" />
+
+            <com.example.lbw.guaniu.RoundImageView
+                android:id="@+id/friend_9_1"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/child3" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:text="张瑶" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:text="小米" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:text="红玉" />
+
+
+        </GridLayout>
+    </LinearLayout>
+
+</ScrollView>

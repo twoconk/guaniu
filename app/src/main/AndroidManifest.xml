@@ -40,6 +40,8 @@
         <activity android:name=".DetailsActivity"/>
         <activity android:name=".RecordActivity"/>
         <activity android:name=".EnsureRecordActivity"/>
+        <activity android:name=".WriteLetterActivity"/>
+        <activity android:name=".MoreRecommendActivity"/>
     </application>
 
 </manifest>
