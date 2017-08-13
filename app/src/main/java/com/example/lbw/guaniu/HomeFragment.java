@@ -18,11 +18,14 @@ import com.example.lbw.guaniu.Story.StoryActivity;
 import com.example.lbw.guaniu.musicdetail.MuiscDetailActivity;
 import com.example.lbw.guaniu.personhome.PersonHome;
 
+import star.yx.tabview.BaseFragment;
+import star.yx.tabview.ITabClickListener;
+
 /**
  * Created by lbw on 2017/8/2.
  */
 
-public class HomeFragment extends Fragment implements View.OnClickListener {
+public class HomeFragment extends BaseFragment implements ITabClickListener, View.OnClickListener {
     private LinearLayout story;
     private LinearLayout song;
     private LinearLayout poem;
@@ -139,5 +142,20 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             default:
                 break;
         }
+    }
+
+    @Override
+    public void fetchData() {
+
+    }
+
+    @Override
+    public void onMenuItemClick() {
+
+    }
+
+    @Override
+    public BaseFragment getFragment() {
+        return this;
     }
 }

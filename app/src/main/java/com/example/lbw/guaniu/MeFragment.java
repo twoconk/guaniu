@@ -16,11 +16,14 @@ import com.example.lbw.guaniu.me.LoginActivity;
 import com.example.lbw.guaniu.me.MyLetterActivity;
 import com.example.lbw.guaniu.me.RegisterActivity;
 
+import star.yx.tabview.BaseFragment;
+import star.yx.tabview.ITabClickListener;
+
 /**
  * Created by lbw on 2017/8/2.
  */
 
-public class MeFragment extends Fragment implements View.OnClickListener{
+public class MeFragment extends BaseFragment implements ITabClickListener, View.OnClickListener {
     private View view;
     private Button register;
     private Button login;
@@ -82,5 +85,20 @@ public class MeFragment extends Fragment implements View.OnClickListener{
 
                 break;
         }
+    }
+
+    @Override
+    public void fetchData() {
+
+    }
+
+    @Override
+    public void onMenuItemClick() {
+
+    }
+
+    @Override
+    public BaseFragment getFragment() {
+        return this;
     }
 }

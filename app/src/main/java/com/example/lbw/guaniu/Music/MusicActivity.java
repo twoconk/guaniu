@@ -18,7 +18,6 @@ import android.widget.LinearLayout;
 import com.example.lbw.guaniu.ActivityCollector;
 import com.example.lbw.guaniu.AddActivity;
 import com.example.lbw.guaniu.FindActivity;
-import com.example.lbw.guaniu.MainActivity;
 import com.example.lbw.guaniu.MusicFlokFragment;
 import com.example.lbw.guaniu.R;
 import com.example.lbw.guaniu.Story.StoryFragmentApadter;
@@ -49,8 +48,7 @@ public class MusicActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MusicActivity.this,MainActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
         initCursorPos();

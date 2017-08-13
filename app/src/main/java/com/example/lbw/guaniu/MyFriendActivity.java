@@ -67,8 +67,7 @@ public class MyFriendActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.back_to_home_form_my_friend){
-            Intent intent = new Intent(this,MainActivity.class);
-            startActivity(intent);
+            finish();
         }else {
             Intent intent = new Intent(this, PersonHome.class);
             startActivity(intent);

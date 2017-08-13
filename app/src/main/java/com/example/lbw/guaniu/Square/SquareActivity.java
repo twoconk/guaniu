@@ -11,7 +11,6 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.example.lbw.guaniu.ActivityCollector;
-import com.example.lbw.guaniu.MainActivity;
 import com.example.lbw.guaniu.MusicPlayerActivity;
 import com.example.lbw.guaniu.musicdetail.MuiscDetailActivity;
 import com.example.lbw.guaniu.R;
@@ -39,9 +38,8 @@ public class SquareActivity extends AppCompatActivity implements AdapterView.OnI
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SquareActivity.this,MainActivity.class);
-                intent.putExtra("back_code",1);
-                startActivity(intent);
+
+                finish();
             }
         });
         squareAdd = (ImageButton)findViewById(R.id.square_add);

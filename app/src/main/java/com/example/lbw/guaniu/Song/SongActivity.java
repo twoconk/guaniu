@@ -15,7 +15,6 @@ import android.widget.Toast;
 import com.example.lbw.guaniu.ActivityCollector;
 import com.example.lbw.guaniu.DetailsActivity;
 import com.example.lbw.guaniu.FindActivity;
-import com.example.lbw.guaniu.MainActivity;
 import com.example.lbw.guaniu.R;
 
 import java.util.ArrayList;
@@ -40,8 +39,7 @@ public class SongActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SongActivity.this,MainActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
         initSong();
