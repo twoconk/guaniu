@@ -12,10 +12,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.lbw.guaniu.DetailsActivity;
+import com.example.lbw.guaniu.detail.DetailsActivity;
 import com.example.lbw.guaniu.R;
-import com.example.lbw.guaniu.Story.Story;
-import com.example.lbw.guaniu.Story.StoryListAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

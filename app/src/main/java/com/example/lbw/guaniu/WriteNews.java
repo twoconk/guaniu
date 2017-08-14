@@ -27,8 +27,7 @@ public class WriteNews extends AppCompatActivity {
         backToSquare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(WriteNews.this, SquareActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
         record = (Button)findViewById(R.id.record);

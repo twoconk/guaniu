@@ -26,8 +26,7 @@ public class MusicPlayerActivity extends AppCompatActivity{
         quit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MusicPlayerActivity.this, SquareActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
         discuss = (LinearLayout)findViewById(R.id.music_player_discuss);

@@ -1,4 +1,4 @@
-package com.example.lbw.guaniu;
+package com.example.lbw.guaniu.detail;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

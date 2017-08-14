@@ -42,20 +42,28 @@
         android:src="@mipmap/bg_me"/>
     <LinearLayout
         android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
             android:layout_marginLeft="16dp"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="故事"/>
         <TextView
-            android:layout_marginLeft="10dp"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="声音25"/>
     </LinearLayout>
+    <ImageView
+        android:id="@+id/tab_detail_music"
+        android:scaleType="matrix"
+        android:layout_marginLeft="17dp"
+        android:background="#00cc00"
+        android:layout_width="25dp"
+        android:layout_height="5dp" />
     <android.support.v4.view.ViewPager
         android:id="@+id/detail_view_pager"
         android:layout_width="match_parent"

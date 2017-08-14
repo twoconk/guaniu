@@ -69,11 +69,12 @@
         <activity android:name=".me.MyLetterActivity"/>
         <activity android:name=".me.MyLetterDetailActivity"/>
         <activity android:name=".MyFriendActivity"/>
-        <activity android:name=".DetailsActivity"/>
+        <activity android:name=".detail.DetailsActivity"/>
         <activity android:name=".RecordActivity"/>
         <activity android:name=".EnsureRecordActivity"/>
         <activity android:name=".WriteLetterActivity"/>
         <activity android:name=".MoreRecommendActivity"/>
+        <activity android:name=".me.AboutUsActivity"/>
     </application>
 
 </manifest>

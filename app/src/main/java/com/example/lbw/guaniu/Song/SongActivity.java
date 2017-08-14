@@ -13,7 +13,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.lbw.guaniu.ActivityCollector;
-import com.example.lbw.guaniu.DetailsActivity;
+import com.example.lbw.guaniu.detail.DetailsActivity;
 import com.example.lbw.guaniu.FindActivity;
 import com.example.lbw.guaniu.R;
 
