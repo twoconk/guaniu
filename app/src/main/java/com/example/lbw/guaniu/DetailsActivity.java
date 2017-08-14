@@ -40,8 +40,8 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.back_to_home_from_details:
-                Intent intentBack = new Intent(DetailsActivity.this,MainActivity.class);
-                startActivity(intentBack);
+
+                finish();
                 break;
             case R.id.music_play:
                 Intent intentMusic = new Intent(DetailsActivity.this,MusicPlayerActivity.class);

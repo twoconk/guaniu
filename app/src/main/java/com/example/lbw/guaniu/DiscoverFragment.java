@@ -12,11 +12,14 @@ import android.widget.LinearLayout;
 import com.example.lbw.guaniu.Square.SquareActivity;
 import com.example.lbw.guaniu.help.HelpActivity;
 
+import star.yx.tabview.BaseFragment;
+import star.yx.tabview.ITabClickListener;
+
 /**
  * Created by lbw on 2017/8/2.
  */
 
-public class DiscoverFragment extends Fragment {
+public class DiscoverFragment extends BaseFragment implements ITabClickListener {
     private LinearLayout square;
     private LinearLayout help;
     @Nullable
@@ -40,5 +43,21 @@ public class DiscoverFragment extends Fragment {
             }
         });
         return view;
+    }
+
+
+    @Override
+    public void fetchData() {
+
+    }
+
+    @Override
+    public void onMenuItemClick() {
+
+    }
+
+    @Override
+    public BaseFragment getFragment() {
+        return this;
     }
 }
