@@ -61,7 +61,7 @@ public class SquareActivity extends AppCompatActivity implements AdapterView.OnI
         list = new ArrayList<>();
         Square music = new Square(R.mipmap.huluwa,"友友宝宝","我读了春晓,很好听","2017/8/5","100个","10条",0);
         list.add(music);
-        Square picture = new Square(R.mipmap.tonghua3,"周心怡","快乐点歌赞吧,我听可好听了","2017/8/5","110个","15条",1);
+        Square picture = new Square(R.mipmap.tonghua2,"周心怡","快乐点歌赞吧,我听可好听了","2017/8/5","110个","15条",1);
         list.add(picture);
         Square video = new Square(R.mipmap.tonghua3,"爱心心","快乐点歌赞吧,我听可好听了","2017/8/5","60个","9条",2);
         list.add(video);

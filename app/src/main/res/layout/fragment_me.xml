@@ -197,6 +197,7 @@
         android:layout_height="1dp"
         android:background="#000000"/>
     <RelativeLayout
+        android:id="@+id/about_us"
         android:layout_width="match_parent"
         android:layout_height="50dp">
 
