@@ -151,7 +151,6 @@ public class MusicActivity extends AppCompatActivity {
             animation.setFillAfter(true);
             animation.setDuration(300);
             cursor.startAnimation(animation);
-
         }
 
         @Override
