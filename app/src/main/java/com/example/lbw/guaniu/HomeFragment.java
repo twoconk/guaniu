@@ -18,6 +18,9 @@ import com.example.lbw.guaniu.Story.StoryActivity;
 import com.example.lbw.guaniu.musicdetail.MuiscDetailActivity;
 import com.example.lbw.guaniu.personhome.PersonHome;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import star.yx.tabview.BaseFragment;
 import star.yx.tabview.ITabClickListener;
 
@@ -26,114 +29,112 @@ import star.yx.tabview.ITabClickListener;
  */
 
 public class HomeFragment extends BaseFragment implements ITabClickListener, View.OnClickListener {
-    private LinearLayout story;
-    private LinearLayout song;
-    private LinearLayout poem;
-    private LinearLayout music;
-    private ImageView image1;
-    private ImageView image2;
-    private ImageView image3;
-    private ImageView image4;
     private LinearLayout moerMusic;
-    private LinearLayout baby1;
-    private LinearLayout baby2;
-    private LinearLayout baby3;
-    private LinearLayout baby4;
     private LinearLayout moreRecommend;
+    private HomeView homeView;
+    private HomeView homeView1;
+    private HomeView homeView2;
     private View view;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_home,container,false);
         initView();
-        story.setOnClickListener(this);
-        song.setOnClickListener(this);
-        poem.setOnClickListener(this);
-        music.setOnClickListener(this);
-        image1.setOnClickListener(this);
-        image2.setOnClickListener(this);
-        image3.setOnClickListener(this);
-        image4.setOnClickListener(this);
         moerMusic.setOnClickListener(this);
-        baby1.setOnClickListener(this);
-        baby2.setOnClickListener(this);
-        baby3.setOnClickListener(this);
-        baby4.setOnClickListener(this);
         moreRecommend.setOnClickListener(this);
+        List<HomeView.ItemData> list = new ArrayList<>();
+        HomeView.ItemData itemData1 = new HomeView.ItemData("故事",R.mipmap.story);
+        HomeView.ItemData itemData2 = new HomeView.ItemData("儿歌",R.mipmap.song);
+        HomeView.ItemData itemData3 = new HomeView.ItemData("诗歌",R.mipmap.poem);
+        HomeView.ItemData itemData4 = new HomeView.ItemData("音乐",R.mipmap.music);
+        list.add(itemData1);
+        list.add(itemData2);
+        list.add(itemData3);
+        list.add(itemData4);
+        homeView = (HomeView)view.findViewById(R.id.home_view);
+        homeView.setViewType1(list);
+        homeView.getChildAt(0).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), StoryActivity.class);
+                startActivity(intent);
+            }
+        });
+        homeView.getChildAt(1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), SongActivity.class);
+                startActivity(intent);
+            }
+        });
+        homeView.getChildAt(2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), PoemActivity.class);
+                startActivity(intent);
+            }
+        });
+        homeView.getChildAt(3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), MusicActivity.class);
+                startActivity(intent);
+            }
+        });
+        List<HomeView.ItemData> list1 = new ArrayList<>();
+        HomeView.ItemData itemData11 = new HomeView.ItemData("木宝宝",R.mipmap.child1);
+        HomeView.ItemData itemData21= new HomeView.ItemData("木宝宝",R.mipmap.child2);
+        HomeView.ItemData itemData31= new HomeView.ItemData("木宝宝",R.mipmap.child3);
+        HomeView.ItemData itemData41= new HomeView.ItemData("木宝宝",R.mipmap.child4);
+        list1.add(itemData11);
+        list1.add(itemData21);
+        list1.add(itemData31);
+        list1.add(itemData41);
+        homeView1 = (HomeView)view.findViewById(R.id.home_view_1);
+        homeView1.setViewType2(list1);
+        for (int i = 0;i<list.size();i++) {
+            homeView1.getChildAt(i).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getContext(), PersonHome.class);
+                    startActivity(intent);
+                }
+            });
+        }
+        List<HomeView.ItemData> list2 = new ArrayList<>();
+        HomeView.ItemData itemData12 = new HomeView.ItemData("木宝宝",R.mipmap.child5);
+        HomeView.ItemData itemData22= new HomeView.ItemData("木宝宝",R.mipmap.child6);
+        HomeView.ItemData itemData32= new HomeView.ItemData("木宝宝",R.mipmap.child7);
+        HomeView.ItemData itemData42= new HomeView.ItemData("木宝宝",R.mipmap.child8);
+        list2.add(itemData12);
+        list2.add(itemData22);
+        list2.add(itemData32);
+        list2.add(itemData42);
+        homeView2 = (HomeView)view.findViewById(R.id.home_view_2);
+        homeView2.setViewType2(list2);
+        for (int i = 0;i<list.size();i++) {
+            homeView2.getChildAt(i).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getContext(), MusicPlayerActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }
         return view;
     }
 
     private void initView() {
-        story = (LinearLayout) view.findViewById(R.id.story);
-        song = (LinearLayout)view.findViewById(R.id.song);
-        poem = (LinearLayout)view.findViewById(R.id.poem);
-        music = (LinearLayout)view.findViewById(R.id.music);
-        image1 = (ImageView)view.findViewById(R.id.music_detail_one);
-        image2 = (ImageView)view.findViewById(R.id.music_detail_two);
-        image3 = (ImageView)view.findViewById(R.id.music_detail_three);
-        image4 = (ImageView)view.findViewById(R.id.music_detail_four);
         moerMusic = (LinearLayout) view.findViewById(R.id.more_music);
-        baby1 = (LinearLayout)view.findViewById(R.id.baby1);
-        baby2 = (LinearLayout)view.findViewById(R.id.baby2);
-        baby3 = (LinearLayout)view.findViewById(R.id.baby3);
-        baby4 = (LinearLayout)view.findViewById(R.id.baby4);
         moreRecommend = (LinearLayout)view.findViewById(R.id.more_recommend);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.story:
-                Intent intentStory = new Intent(getContext(),StoryActivity.class);
-                startActivity(intentStory);
-                break;
-            case R.id.song:
-                Intent intentSong = new Intent(getContext(),SongActivity.class);
-                startActivity(intentSong);
-                break;
-            case R.id.poem:
-                Intent intentPoem = new Intent(getContext(),PoemActivity.class);
-                startActivity(intentPoem);
-                break;
-            case R.id.music:
-                Intent intentMusic = new Intent(getContext(),MusicActivity.class);
-                startActivity(intentMusic);
-                break;
-            case R.id.music_detail_one:
-                Intent intentDetailOne = new Intent(getContext(),MusicPlayerActivity.class);
-                startActivity(intentDetailOne);
-                break;
-            case R.id.music_detail_two:
-                Intent intentDetailTwo = new Intent(getContext(),MusicPlayerActivity.class);
-                startActivity(intentDetailTwo);
-                break;
-            case R.id.music_detail_three:
-                Intent intentDetailThree = new Intent(getContext(),MusicPlayerActivity.class);
-                startActivity(intentDetailThree);
-                break;
-            case R.id.music_detail_four:
-                Intent intentDetailFour = new Intent(getContext(),MusicPlayerActivity.class);
-                startActivity(intentDetailFour);
-                break;
             case R.id.more_music:
                 Intent intentSquare = new Intent(getContext(), SquareActivity.class);
                 startActivity(intentSquare);
-                break;
-            case R.id.baby1:
-                Intent intentBaby1 = new Intent(getContext(), PersonHome.class);
-                startActivity(intentBaby1);
-                break;
-            case R.id.baby2:
-                Intent intentBaby2 = new Intent(getContext(), PersonHome.class);
-                startActivity(intentBaby2);
-                break;
-            case R.id.baby3:
-                Intent intentBaby3 = new Intent(getContext(), PersonHome.class);
-                startActivity(intentBaby3);
-                break;
-            case R.id.baby4:
-                Intent intentBaby4 = new Intent(getContext(), PersonHome.class);
-                startActivity(intentBaby4);
                 break;
             case R.id.more_recommend:
                 Intent intentMoreRecommend = new Intent(getContext(),MoreRecommendActivity.class);

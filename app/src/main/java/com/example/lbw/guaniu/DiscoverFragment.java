@@ -10,7 +10,11 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.example.lbw.guaniu.Square.SquareActivity;
+import com.example.lbw.guaniu.Story.StoryActivity;
 import com.example.lbw.guaniu.help.HelpActivity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import star.yx.tabview.BaseFragment;
 import star.yx.tabview.ITabClickListener;
@@ -22,6 +26,7 @@ import star.yx.tabview.ITabClickListener;
 public class DiscoverFragment extends BaseFragment implements ITabClickListener {
     private LinearLayout square;
     private LinearLayout help;
+    private HomeView homeView;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

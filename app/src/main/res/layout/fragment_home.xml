@@ -15,100 +15,13 @@
             android:scaleType="fitXY"
             android:src="@mipmap/home_bg" />
 
-        <LinearLayout
-            android:id="@+id/story"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <com.example.lbw.guaniu.HomeView
             android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:id="@+id/home_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@null"
-                    android:src="@mipmap/story" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="8dp"
-                    android:text="故事" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/song"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@null"
-                    android:src="@mipmap/song" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="8dp"
-                    android:text="儿歌" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/poem"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@null"
-                    android:src="@mipmap/poem" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="8dp"
-                    android:text="诗歌" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/music"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@null"
-                    android:src="@mipmap/music" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="8dp"
-                    android:text="音乐" />
-            </LinearLayout>
-        </LinearLayout>
+        </com.example.lbw.guaniu.HomeView>
 
         <TextView
             android:layout_width="match_parent"
@@ -150,92 +63,12 @@
             </LinearLayout>
         </RelativeLayout>
 
-        <LinearLayout
+        <com.example.lbw.guaniu.HomeView
+            android:id="@+id/home_view_1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
-            <LinearLayout
-                android:id="@+id/baby1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="75dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
-                    android:scaleType="fitCenter"
-                    android:src="@mipmap/child1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="木宝宝" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/baby2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="75dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@mipmap/child2" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="木宝宝" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/baby3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="75dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@mipmap/child3" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="木宝宝" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/baby4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="75dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@mipmap/child4" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="木宝宝" />
-            </LinearLayout>
-        </LinearLayout>
+        </com.example.lbw.guaniu.HomeView>
 
         <TextView
             android:layout_width="match_parent"
@@ -276,92 +109,12 @@
                     android:src="@mipmap/more" />
             </LinearLayout>
         </RelativeLayout>
-
-        <LinearLayout
+        <com.example.lbw.guaniu.HomeView
+            android:id="@+id/home_view_2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
+        </com.example.lbw.guaniu.HomeView>
 
-                <ImageView
-                    android:id="@+id/music_detail_one"
-                    android:layout_width="75dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
-                    android:scaleType="fitCenter"
-                    android:src="@mipmap/child5" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="木宝宝" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/music_detail_two"
-                    android:layout_width="75dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@mipmap/child6" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="木宝宝" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/music_detail_three"
-                    android:layout_width="75dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@mipmap/child7" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="木宝宝" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/music_detail_four"
-                    android:layout_width="75dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@mipmap/child8" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="木宝宝" />
-            </LinearLayout>
-        </LinearLayout>
     </LinearLayout>
 </ScrollView>
