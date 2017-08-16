@@ -48,6 +48,7 @@ public class MusicPlayerActivity extends AppCompatActivity{
     void initPlayerView(){
 
         mpv = (MusicPlayerView) findViewById(R.id.mpv);
+        mpv.setProgressVisibility(false);
         mpv.setCoverURL("http://7xiava.com1.z0.glb.clouddn.com/FhtE_xLhl1vC7xACByQVnxduZNmT?imageView2/1/w/320/h/240");
 
         mpv.setOnClickListener(new View.OnClickListener() {

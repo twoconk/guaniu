@@ -40,6 +40,7 @@ import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 
 import com.example.lbw.guaniu.R;
+import com.example.lbw.guaniu.utils.ImageUtil;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
@@ -299,9 +300,9 @@ public class MusicPlayerView extends View implements OnPlayPauseToggleListener {
   private void init(Context context, AttributeSet attrs) {
 
     setWillNotDraw(false);
-    mPlayPauseDrawable = new PlayPauseDrawable(context);
-    mPlayPauseDrawable.setCallback(callback);
-    mPlayPauseDrawable.setToggleListener(this);
+//    mPlayPauseDrawable = new PlayPauseDrawable(context);
+//    mPlayPauseDrawable.setCallback(callback);
+//    mPlayPauseDrawable.setToggleListener(this);
 
     //Get Image resource from xml
     TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.playerview);
@@ -378,11 +379,11 @@ public class MusicPlayerView extends View implements OnPlayPauseToggleListener {
     //button size is about to 1/4 of image size then we divide it to 8.
     mButtonRadius = mWidth / 8.0f;
 
-    //We resize play/pause drawable with button radius. button needs to be inside circle.
-    mPlayPauseDrawable.resize((1.2f * mButtonRadius / 5.0f), (3.0f * mButtonRadius / 5.0f) + 10.0f,
-        (mButtonRadius / 5.0f));
-
-    mPlayPauseDrawable.setBounds(0, 0, mWidth, mHeight);
+//    //We resize play/pause drawable with button radius. button needs to be inside circle.
+//    mPlayPauseDrawable.resize((1.2f * mButtonRadius / 5.0f), (3.0f * mButtonRadius / 5.0f) + 10.0f,
+//        (mButtonRadius / 5.0f));
+//
+//    mPlayPauseDrawable.setBounds(0, 0, mWidth, mHeight);
 
     mButtonRegion = new Region((int) (mCenterX - mButtonRadius), (int) (mCenterY - mButtonRadius),
         (int) (mCenterX + mButtonRadius), (int) (mCenterY + mButtonRadius));
@@ -406,10 +407,10 @@ public class MusicPlayerView extends View implements OnPlayPauseToggleListener {
     canvas.drawCircle(mCenterX, mCenterY, radius, mPaintCover);
 
     //Rotate back to make play/pause button stable(No turn)
-    canvas.rotate(-mRotateDegrees, mCenterX, mCenterY);
+//    canvas.rotate(-mRotateDegrees, mCenterX, mCenterY);
 
     //Draw Play/Pause button
-    canvas.drawCircle(mCenterX, mCenterY, mButtonRadius, mPaintButton);
+//    canvas.drawCircle(mCenterX, mCenterY, mButtonRadius, mPaintButton);
 
     if (mProgressVisibility) {
       //Draw empty progress
@@ -443,7 +444,7 @@ public class MusicPlayerView extends View implements OnPlayPauseToggleListener {
       mFirstDraw = false;
     }
 
-    mPlayPauseDrawable.draw(canvas);
+//    mPlayPauseDrawable.draw(canvas);
   }
 
   /**
@@ -477,8 +478,7 @@ public class MusicPlayerView extends View implements OnPlayPauseToggleListener {
 
     //if mBitmapCover is null then create default colored cover
     if (mBitmapCover == null) {
-      mBitmapCover = Bitmap.createBitmap(mWidth, mHeight, Bitmap.Config.ARGB_8888);
-      mBitmapCover.eraseColor(mCoverColor);
+        mBitmapCover = ImageUtil.drawableToBitmap(getContext().getDrawable(R.drawable.child3));
     }
 
     mCoverScale = ((float) mWidth) / (float) mBitmapCover.getWidth();
@@ -515,7 +515,7 @@ public class MusicPlayerView extends View implements OnPlayPauseToggleListener {
   public void start() {
 
     isRotating = true;
-    mPlayPauseDrawable.setPlaying(isRotating);
+//    mPlayPauseDrawable.setPlaying(isRotating);
     mHandlerRotate.removeCallbacksAndMessages(null);
     mHandlerRotate.postDelayed(mRunnableRotate, ROTATE_DELAY);
     if (isAutoProgress) {
@@ -530,8 +530,8 @@ public class MusicPlayerView extends View implements OnPlayPauseToggleListener {
    */
   public void stop() {
     isRotating = false;
-    mPlayPauseDrawable.setPlaying(isRotating);
-    postInvalidate();
+//    mPlayPauseDrawable.setPlaying(isRotating);
+//    postInvalidate();
   }
 
   /**
@@ -778,15 +778,15 @@ public class MusicPlayerView extends View implements OnPlayPauseToggleListener {
    * Animate play/pause image
    */
   public void toggle() {
-    if (mAnimatorSet != null) {
-      mAnimatorSet.cancel();
-    }
-
-    mAnimatorSet = new AnimatorSet();
-    final Animator pausePlayAnim = mPlayPauseDrawable.getPausePlayAnimator();
-    mAnimatorSet.setInterpolator(new DecelerateInterpolator());
-    mAnimatorSet.setDuration(PLAY_PAUSE_ANIMATION_DURATION);
-    mAnimatorSet.playTogether(pausePlayAnim);
-    mAnimatorSet.start();
+//    if (mAnimatorSet != null) {
+//      mAnimatorSet.cancel();
+//    }
+//
+//    mAnimatorSet = new AnimatorSet();
+//    final Animator pausePlayAnim = mPlayPauseDrawable.getPausePlayAnimator();
+//    mAnimatorSet.setInterpolator(new DecelerateInterpolator());
+//    mAnimatorSet.setDuration(PLAY_PAUSE_ANIMATION_DURATION);
+//    mAnimatorSet.playTogether(pausePlayAnim);
+//    mAnimatorSet.start();
   }
 }
