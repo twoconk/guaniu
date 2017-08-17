@@ -11,6 +11,7 @@
     <!-- Base application theme. -->
         <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowNoTitle">true</item>//无标题
         <item name="android:windowActionBar">false</item>//无ActionBar
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -18,5 +19,8 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowBackground">@color/white</item>
     </style>
-
+    <style name="Theme.AppStartLoad" parent="android:Theme">
+        <item name="android:windowBackground">@drawable/ipod_bg</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
 </resources>
