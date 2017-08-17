@@ -52,5 +52,8 @@ public class Square {
     public String getDiscuss() {
         return discuss;
     }
+    public void setPraise(String praise){
+        this.praise = praise;
+    }
 
 }

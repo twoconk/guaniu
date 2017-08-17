@@ -2,11 +2,13 @@ package com.example.lbw.guaniu.Square;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.lbw.guaniu.Music.MusicDiscussDetailActivity;
@@ -21,9 +23,11 @@ import java.util.List;
 
 public class SquareAdapter extends BaseAdapter {
     private Context context;
-    private int resourceId;
     private List<Square> list;
     private LayoutInflater inflater;
+    private ViewHolder1 holder1 = null;;
+    private ViewHolder2 holder2 = null;
+    private ViewHolder3 holder3 = null;
     //为三种布局定义一个标识
     private final int TYPE1 = 0;
     private final int TYPE2 = 1;
@@ -68,10 +72,7 @@ public class SquareAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder1 holder1 = null;;
-        ViewHolder2 holder2 = null;
-        ViewHolder3 holder3 = null;
+    public View getView(final int position, View convertView, ViewGroup parent) {
         int type = getItemViewType(position);
         if (convertView == null){
             switch (type){
@@ -90,6 +91,13 @@ public class SquareAdapter extends BaseAdapter {
                         public void onClick(View v) {
                             Intent intent = new Intent(context,MusicDiscussDetailActivity.class);
                             context.startActivity(intent);
+                        }
+                    });
+                    holder1.zanInMusic = (LinearLayout)convertView.findViewById(R.id.zan_in_music);
+                    holder1.zanInMusic.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            addZan(position);
                         }
                     });
                     convertView.setTag(holder1);
@@ -111,6 +119,13 @@ public class SquareAdapter extends BaseAdapter {
                             context.startActivity(intent);
                         }
                     });
+                    holder2.zanInPicture = (LinearLayout)convertView.findViewById(R.id.zan_in_picture);
+                    holder2.zanInPicture.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            addZan(position);
+                        }
+                    });
                     convertView.setTag(holder2);
                     break;
                 case TYPE3:
@@ -128,6 +143,13 @@ public class SquareAdapter extends BaseAdapter {
                         public void onClick(View v) {
                             Intent intent = new Intent(context,MusicDiscussDetailActivity.class);
                             context.startActivity(intent);
+                        }
+                    });
+                    holder3.zanInVideo = (LinearLayout)convertView.findViewById(R.id.zan_in_video);
+                    holder3.zanInVideo.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            addZan(position);
                         }
                     });
                     convertView.setTag(holder3);
@@ -177,6 +199,16 @@ public class SquareAdapter extends BaseAdapter {
         return convertView;
     }
 
+    private void addZan(int position) {
+        Square square = list.get(position);
+        String s = square.getPraise();
+        s = s.substring(0,s.length() -1);
+        int num = Integer.parseInt(s);
+        num++;
+        square.setPraise(num + "个");
+        notifyDataSetChanged();
+    }
+
     class ViewHolder1 {
         ImageView image;
         TextView title;
@@ -185,7 +217,9 @@ public class SquareAdapter extends BaseAdapter {
         TextView pinglun;
         TextView time;
         ImageView zanDetail;
+        LinearLayout zanInMusic;
     }
+
     class ViewHolder2 {
         ImageView image;
         TextView title;
@@ -194,7 +228,9 @@ public class SquareAdapter extends BaseAdapter {
         TextView pinglun;
         TextView time;
         ImageView zanDetail;
+        LinearLayout zanInPicture;
     }
+
     class ViewHolder3 {
         ImageView image;
         TextView title;
@@ -203,5 +239,6 @@ public class SquareAdapter extends BaseAdapter {
         TextView pinglun;
         TextView time;
         ImageView zanDetail;
+        LinearLayout zanInVideo;
     }
 }

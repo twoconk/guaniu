@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.lbw.guaniu.Music.MusicActivity;
 import com.example.lbw.guaniu.Poem.PoemActivity;
@@ -17,6 +18,10 @@ import com.example.lbw.guaniu.Square.SquareActivity;
 import com.example.lbw.guaniu.Story.StoryActivity;
 import com.example.lbw.guaniu.musicdetail.MuiscDetailActivity;
 import com.example.lbw.guaniu.personhome.PersonHome;
+import com.jude.rollviewpager.OnItemClickListener;
+import com.jude.rollviewpager.RollPagerView;
+import com.jude.rollviewpager.adapter.LoopPagerAdapter;
+import com.jude.rollviewpager.adapter.StaticPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +40,7 @@ public class HomeFragment extends BaseFragment implements ITabClickListener, Vie
     private HomeView homeView1;
     private HomeView homeView2;
     private View view;
+    private RollPagerView mRollViewPager;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -121,6 +127,18 @@ public class HomeFragment extends BaseFragment implements ITabClickListener, Vie
                 }
             });
         }
+        mRollViewPager = (RollPagerView) view.findViewById(R.id.roll_view_pager);
+        mRollViewPager.setPlayDelay(3000);
+        //设置透明度
+        mRollViewPager.setAnimationDurtion(500);
+        //设置适配器
+        mRollViewPager.setAdapter(new TestLoopAdapter(mRollViewPager));
+        mRollViewPager.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(int i) {
+                Toast.makeText(getContext(),"点击了第" + i + "个图片",Toast.LENGTH_SHORT).show();
+            }
+        });
         return view;
     }
 
@@ -158,5 +176,32 @@ public class HomeFragment extends BaseFragment implements ITabClickListener, Vie
     @Override
     public BaseFragment getFragment() {
         return this;
+    }
+    private class TestLoopAdapter  extends LoopPagerAdapter {
+        private int[] imgs = {
+                R.mipmap.home_bg,
+                R.mipmap.xiongchumo,
+                R.mipmap.katong2,
+                R.mipmap.tonghua2
+        };
+
+
+        public TestLoopAdapter(RollPagerView viewPager) {
+            super(viewPager);
+        }
+
+        @Override
+        public View getView(ViewGroup container, int position) {
+            ImageView view = new ImageView(container.getContext());
+            view.setImageResource(imgs[position]);
+            view.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+            return view;
+        }
+
+        @Override
+        public int getRealCount() {
+            return imgs.length;
+        }
     }
 }

@@ -38,7 +38,6 @@ public class SquareActivity extends AppCompatActivity implements AdapterView.OnI
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 finish();
             }
         });
