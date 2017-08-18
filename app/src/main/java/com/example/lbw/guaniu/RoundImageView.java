@@ -55,7 +55,7 @@ public class RoundImageView extends android.support.v7.widget.AppCompatImageView
 
     @Override
     protected void onDraw(Canvas canvas) {
-        Drawable drawable = getDrawable() ;
+        Drawable drawable = getDrawable();
         if (drawable == null) {
             return;
         }

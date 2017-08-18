@@ -65,9 +65,15 @@
         android:id="@+id/information_setting"
         android:layout_width="match_parent"
         android:layout_height="50dp">
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/setting"/>
 
         <TextView
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="40dp"
             android:textColor="#000000"
             android:gravity="center_vertical"
             android:text="基本信息设置"
@@ -93,9 +99,15 @@
         android:id="@+id/my_letter"
         android:layout_width="match_parent"
         android:layout_height="50dp">
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/letter"/>
 
         <TextView
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="40dp"
             android:textColor="#000000"
             android:gravity="center_vertical"
             android:text="我的信箱"
@@ -120,9 +132,15 @@
         android:id="@+id/my_friends"
         android:layout_width="match_parent"
         android:layout_height="50dp">
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/friend"/>
 
         <TextView
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="40dp"
             android:textColor="#000000"
             android:gravity="center_vertical"
             android:text="我的好友"
@@ -147,12 +165,17 @@
         android:id="@+id/my_friends_news"
         android:layout_width="match_parent"
         android:layout_height="50dp">
-
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/fans"/>
         <TextView
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="40dp"
             android:textColor="#000000"
             android:gravity="center_vertical"
-            android:text="我的朋友圈"
+            android:text="我的粉丝"
             android:layout_width="wrap_content"
             android:layout_height="match_parent" />
 
@@ -173,9 +196,15 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp">
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/update"/>
 
         <TextView
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="40dp"
             android:textColor="#000000"
             android:gravity="center_vertical"
             android:text="检查更新"
@@ -200,9 +229,15 @@
         android:id="@+id/about_us"
         android:layout_width="match_parent"
         android:layout_height="50dp">
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/about"/>
 
         <TextView
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="40dp"
             android:textColor="#000000"
             android:gravity="center_vertical"
             android:text="关于我们"
