@@ -15,7 +15,9 @@ import com.example.lbw.guaniu.Music.MusicDiscussDetailActivity;
 import com.example.lbw.guaniu.R;
 import com.example.lbw.guaniu.help.HelpDetailActivity;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by lbw on 2017/8/5.
@@ -37,6 +39,8 @@ public class SquareAdapter extends BaseAdapter {
         this.list = list;
         this.context = context;
         inflater = LayoutInflater.from(context);
+
+
     }
 
     @Override
