@@ -14,10 +14,12 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.lbw.guaniu.ActivityCollector;
 import com.example.lbw.guaniu.AddActivity;
 import com.example.lbw.guaniu.FindActivity;
+import com.example.lbw.guaniu.Poem.PoemActivity;
 import com.example.lbw.guaniu.R;
 
 import java.util.ArrayList;
@@ -27,15 +29,20 @@ import java.util.List;
  * Created by lbw on 2017/8/3.
  */
 
-public class StoryActivity extends AppCompatActivity {
+public class StoryActivity extends AppCompatActivity implements View.OnClickListener{
     private LinearLayout back;
     private List<Fragment> fragmentList;
     private ImageButton find;
+    private ViewPager viewPager;
     private int bmpw = 0;//游标宽度
     private int offset = 0;//动画图片偏移量
     private int currIndex = 0;//当前页片标号
     private ImageView cursor;
     private ImageView add;
+    private TextView tradition;
+    private TextView fariy;
+    private TextView book;
+    private int currentFragment;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,37 +50,26 @@ public class StoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_story);
         ActivityCollector.addActivity(this);
         back = (LinearLayout)findViewById(R.id.story_back_to);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        back.setOnClickListener(this);
         initCursorPos();
         fragmentList = new ArrayList<>();
         fragmentList.add(new StoryTraditionFragment());
         fragmentList.add(new StoryFairyFrangment());
         fragmentList.add(new StoryCartoonFragment());
-        ViewPager viewPager = (ViewPager)findViewById(R.id.story_view_pager);
+        viewPager = (ViewPager)findViewById(R.id.story_view_pager);
         StoryFragmentApadter apadter = new StoryFragmentApadter(getSupportFragmentManager(),fragmentList);
         viewPager.setOnPageChangeListener(new MyPagerChangeLister());
         viewPager.setAdapter(apadter);
         find = (ImageButton)findViewById(R.id.find_story);
-        find.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(StoryActivity.this, FindActivity.class);
-                startActivity(intent);
-            }
-        });
+        find.setOnClickListener(this);
         add = (ImageView)findViewById(R.id.add_story);
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(StoryActivity.this, AddActivity.class);
-                startActivity(intent);
-            }
-        });
+        add.setOnClickListener(this);
+        tradition = (TextView)findViewById(R.id.tradition);
+        tradition.setOnClickListener(this);
+        fariy = (TextView)findViewById(R.id.fairy);
+        fariy.setOnClickListener(this);
+        book = (TextView)findViewById(R.id.book);
+        book.setOnClickListener(this);
     }
 
     @Override
@@ -92,6 +88,38 @@ public class StoryActivity extends AppCompatActivity {
         matrix.postTranslate(offset,0);
         cursor.setImageMatrix(matrix);
     }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.story_back_to:
+                finish();;
+                break;
+            case R.id.find_story:
+                Intent intentFind = new Intent(StoryActivity.this, FindActivity.class);
+                startActivity(intentFind);
+                break;
+            case R.id.add_story:
+                Intent intentAdd = new Intent(StoryActivity.this, AddActivity.class);
+                startActivity(intentAdd);
+                break;
+            case R.id.tradition:
+                currentFragment = 0;
+                viewPager.setCurrentItem(currentFragment);
+                break;
+            case R.id.fairy:
+                currentFragment = 1;
+                viewPager.setCurrentItem(currentFragment);
+                break;
+            case R.id.book:
+                currentFragment = 2;
+                viewPager.setCurrentItem(currentFragment);
+                break;
+            default:
+                break;
+        }
+    }
+
     public class MyPagerChangeLister implements ViewPager.OnPageChangeListener {
         int one = offset * 2 + bmpw;
         int two = one * 2;

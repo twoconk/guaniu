@@ -14,12 +14,14 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.lbw.guaniu.ActivityCollector;
 import com.example.lbw.guaniu.AddActivity;
 import com.example.lbw.guaniu.FindActivity;
 import com.example.lbw.guaniu.MusicFlokFragment;
 import com.example.lbw.guaniu.R;
+import com.example.lbw.guaniu.Song.SongActivity;
 import com.example.lbw.guaniu.Story.StoryFragmentApadter;
 
 import java.util.ArrayList;
@@ -29,15 +31,21 @@ import java.util.List;
  * Created by lbw on 2017/8/3.
  */
 
-public class MusicActivity extends AppCompatActivity {
+public class MusicActivity extends AppCompatActivity implements View.OnClickListener{
     private LinearLayout back;
     private List<Fragment> fragmentList;
     private ImageButton find;
+    private int currentFragment;
+    private ViewPager viewPager;
     private int bmpw = 0;//游标宽度
     private int offset = 0;//动画图片偏移量
     private int currIndex = 0;//当前页片标号
     private ImageView cursor;
     private ImageView add;
+    private TextView school;
+    private TextView ballad;
+    private TextView common;
+    private TextView revolutionary;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,38 +53,29 @@ public class MusicActivity extends AppCompatActivity {
         setContentView(R.layout.activity_music);
         ActivityCollector.addActivity(this);
         back = (LinearLayout)findViewById(R.id.music_back_to);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        back.setOnClickListener(this);
         initCursorPos();
         fragmentList = new ArrayList<>();
         fragmentList.add(new MusicSchoolFragment());
         fragmentList.add(new MusicPopFragment());
         fragmentList.add(new MusicCommonFragment());
         fragmentList.add(new MusicFlokFragment());
-        ViewPager viewPager = (ViewPager)findViewById(R.id.music_view_pager);
+        viewPager = (ViewPager)findViewById(R.id.music_view_pager);
         StoryFragmentApadter apadter = new StoryFragmentApadter(getSupportFragmentManager(),fragmentList);
         viewPager.setOnPageChangeListener(new MusicActivity.MyPagerChangeLister());
         viewPager.setAdapter(apadter);
         find = (ImageButton)findViewById(R.id.find_music);
-        find.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MusicActivity.this, FindActivity.class);
-                startActivity(intent);
-            }
-        });
+        find.setOnClickListener(this);
         add = (ImageView)findViewById(R.id.add_music);
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MusicActivity.this, AddActivity.class);
-                startActivity(intent);
-            }
-        });
+        add.setOnClickListener(this);
+        school = (TextView)findViewById(R.id.school);
+        ballad = (TextView)findViewById(R.id.ballad);
+        common = (TextView)findViewById(R.id.common);
+        revolutionary = (TextView)findViewById(R.id.revolutionary);
+        school.setOnClickListener(this);
+        ballad.setOnClickListener(this);
+        common.setOnClickListener(this);
+        revolutionary.setOnClickListener(this);
     }
 
     @Override
@@ -95,6 +94,42 @@ public class MusicActivity extends AppCompatActivity {
         matrix.postTranslate(offset,0);
         cursor.setImageMatrix(matrix);
     }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.music_back_to:
+                finish();
+                break;
+            case R.id.find_music:
+                Intent intentFind = new Intent(MusicActivity.this, FindActivity.class);
+                startActivity(intentFind);
+                break;
+            case R.id.add_music:
+                Intent intentAdd = new Intent(MusicActivity.this, AddActivity.class);
+                startActivity(intentAdd);
+                break;
+            case R.id.school:
+                currentFragment = 0;
+                viewPager.setCurrentItem(currentFragment);
+                break;
+            case R.id.ballad:
+                currentFragment = 1;
+                viewPager.setCurrentItem(currentFragment);
+                break;
+            case R.id.common:
+                currentFragment = 2;
+                viewPager.setCurrentItem(currentFragment);
+                break;
+            case R.id.revolutionary:
+                currentFragment = 3;
+                viewPager.setCurrentItem(currentFragment);
+                break;
+            default:
+                break;
+        }
+    }
+
     public class MyPagerChangeLister implements ViewPager.OnPageChangeListener {
         int one = offset * 2 + bmpw;
         int two = one * 2;

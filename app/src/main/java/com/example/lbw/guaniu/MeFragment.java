@@ -78,7 +78,7 @@ public class MeFragment extends BaseFragment implements ITabClickListener, View.
                 startActivity(intentMyLetter);
                 break;
             case R.id.my_friends_news:
-                Intent intentMyFriendNews = new Intent(getContext(), SquareActivity.class);
+                Intent intentMyFriendNews = new Intent(getContext(), MyFriendActivity.class);
                 startActivity(intentMyFriendNews);
                 break;
             case R.id.my_friends:

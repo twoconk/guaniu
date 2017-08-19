@@ -14,6 +14,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.lbw.guaniu.ActivityCollector;
 import com.example.lbw.guaniu.AddActivity;
@@ -28,53 +29,50 @@ import java.util.List;
  * Created by lbw on 2017/8/3.
  */
 
-public class PoemActivity extends AppCompatActivity {
+public class PoemActivity extends AppCompatActivity implements View.OnClickListener {
     private LinearLayout back;
     private List<Fragment> fragmentList;
+    private ViewPager viewPager;
     private int bmpw = 0;//游标宽度
     private int offset = 0;//动画图片偏移量
     private int currIndex = 0;//当前页片标号
     private ImageView cursor;
     private ImageButton find;
     private ImageView add;
+    private TextView tangshi;
+    private TextView songci;
+    private TextView nowdaysPoem;
+    private TextView othersPoem;
+    private int currentFragment;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_poem);
         ActivityCollector.addActivity(this);
         back = (LinearLayout)findViewById(R.id.poem_back_to);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        back.setOnClickListener(this);
         initCursorPos();
         fragmentList = new ArrayList<>();
         fragmentList.add(new PoemTangshiFragment());
         fragmentList.add(new PoemSongciFragment());
         fragmentList.add(new PoemTraditionFragment());
         fragmentList.add(new PoemTraditionFragment());
-        ViewPager viewPager = (ViewPager)findViewById(R.id.poem_view_pager);
+        viewPager = (ViewPager)findViewById(R.id.poem_view_pager);
         StoryFragmentApadter apadter = new StoryFragmentApadter(getSupportFragmentManager(),fragmentList);
         viewPager.setOnPageChangeListener(new PoemActivity.MyPagerChangeLister());
         viewPager.setAdapter(apadter);
         find = (ImageButton)findViewById(R.id.find_poem);
-        find.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(PoemActivity.this, FindActivity.class);
-                startActivity(intent);
-            }
-        });
+        find.setOnClickListener(this);
         add = (ImageView)findViewById(R.id.add_poem);
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(PoemActivity.this, AddActivity.class);
-                startActivity(intent);
-            }
-        });
+        add.setOnClickListener(this);
+        tangshi = (TextView)findViewById(R.id.tangshi);
+        tangshi.setOnClickListener(this);
+        songci = (TextView)findViewById(R.id.songci);
+        songci.setOnClickListener(this);
+        nowdaysPoem = (TextView)findViewById(R.id.nowdays_poem);
+        nowdaysPoem.setOnClickListener(this);
+        othersPoem = (TextView)findViewById(R.id.other_poem);
+        othersPoem.setOnClickListener(this);
     }
 
     @Override
@@ -93,6 +91,41 @@ public class PoemActivity extends AppCompatActivity {
         Matrix matrix = new Matrix();
         matrix.postTranslate(offset,0);
         cursor.setImageMatrix(matrix);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.poem_back_to:
+                finish();
+                break;
+            case R.id.find_poem:
+                Intent intentFind = new Intent(PoemActivity.this, FindActivity.class);
+                startActivity(intentFind);
+                break;
+            case R.id.add_poem:
+                Intent intentAdd = new Intent(PoemActivity.this, AddActivity.class);
+                startActivity(intentAdd);
+                break;
+            case R.id.tangshi:
+                currentFragment = 0;
+                viewPager.setCurrentItem(currentFragment);
+                break;
+            case R.id.songci:
+                currentFragment = 1;
+                viewPager.setCurrentItem(currentFragment);
+                break;
+            case R.id.nowdays_poem:
+                currentFragment = 2;
+                viewPager.setCurrentItem(currentFragment);
+                break;
+            case R.id.other_poem:
+                currentFragment = 3;
+                viewPager.setCurrentItem(currentFragment);
+                break;
+            default:
+                break;
+        }
     }
 
     public class MyPagerChangeLister implements ViewPager.OnPageChangeListener {

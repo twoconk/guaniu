@@ -1,13 +1,11 @@
 package com.example.lbw.guaniu;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.example.lbw.guaniu.Square.SquareActivity;
 
 /**
  * Created by lbw on 2017/8/10.
@@ -24,8 +22,7 @@ public class AddActivity extends AppCompatActivity{
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddActivity.this,SquareActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
     }
