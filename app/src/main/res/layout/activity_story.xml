@@ -63,6 +63,7 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/tradition"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -70,6 +71,7 @@
             android:text="传统" />
 
         <TextView
+            android:id="@+id/fairy"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -77,6 +79,7 @@
             android:text="童话" />
 
         <TextView
+            android:id="@+id/book"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
