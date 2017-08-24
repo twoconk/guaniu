@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.lbw.guaniu.DiscoverFragment;
@@ -32,9 +33,9 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabCl
     private ActionBar actionBar;
     BaseFragment fragment;
 
-    private Button add;
-    private Button find;
-    private Button play;
+    private ImageButton add;
+    private ImageButton find;
+    private ImageButton play;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +48,9 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabCl
     private void initView() {
         mTabLayout = (TabLayout) findViewById(R.id.tab_layout);
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
-        add = (Button) findViewById(R.id.add);
-        play = (Button) findViewById(R.id.play);
-        find = (Button) findViewById(R.id.find);
+        add = (ImageButton) findViewById(R.id.add);
+        play = (ImageButton) findViewById(R.id.play);
+        find = (ImageButton) findViewById(R.id.find);
         add.setOnClickListener(this);
         play.setOnClickListener(this);
         find.setOnClickListener(this);

@@ -1,4 +1,4 @@
-package com.example.lbw.guaniu.Song;
+package com.example.lbw.guaniu.commen_view;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -7,12 +7,12 @@ import android.support.v4.app.FragmentPagerAdapter;
 import java.util.List;
 
 /**
- * Created by lbw on 2017/8/19.
+ * Created by lbw on 2017/8/5.
  */
 
-public class SongFragmentAdapter extends FragmentPagerAdapter {
+public class CommenFragmentAdapter extends FragmentPagerAdapter {
     final private List<Fragment> fragmentList;
-    public SongFragmentAdapter(FragmentManager fm, List<Fragment> fragmentList) {
+    public CommenFragmentAdapter(FragmentManager fm, List<Fragment> fragmentList) {
         super(fm);
         this.fragmentList = fragmentList;
     }

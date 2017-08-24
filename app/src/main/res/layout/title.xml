@@ -19,28 +19,28 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true">
 
-        <Button
+        <ImageButton
             android:id="@+id/play"
-            android:layout_gravity="center"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@mipmap/play"/>
-        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:src="@mipmap/play"/>
+        <ImageButton
             android:layout_marginLeft="15dp"
             android:layout_toRightOf="@+id/play"
             android:id="@+id/find"
-            android:layout_gravity="center"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@mipmap/find"/>
-        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:src="@mipmap/find"/>
+        <ImageButton
             android:layout_marginLeft="15dp"
             android:layout_toRightOf="@+id/find"
             android:id="@+id/add"
-            android:layout_gravity="center"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@mipmap/add"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:src="@mipmap/add"/>
 
     </RelativeLayout>
 

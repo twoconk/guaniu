@@ -19,16 +19,16 @@
         <com.example.lbw.guaniu.HomeView
             android:layout_marginTop="10dp"
             android:id="@+id/home_view"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
         </com.example.lbw.guaniu.HomeView>
 
-        <TextView
+        <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="@dimen/line_height"
             android:layout_marginTop="10dp"
-            android:background="#000000" />
+            android:background="@color/line_gray" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="10dp"
                 android:text="推荐宝宝"
                 android:textColor="#000" />
 
@@ -71,11 +71,11 @@
 
         </com.example.lbw.guaniu.HomeView>
 
-        <TextView
+        <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="@dimen/line_height"
             android:layout_marginTop="10dp"
-            android:background="#000000" />
+            android:background="@color/line_gray" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -85,7 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="10dp"
                 android:text="推荐声音"
                 android:textColor="#000" />
 

@@ -17,7 +17,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.example.lbw.guaniu.ActivityCollector;
 import com.example.lbw.guaniu.AddActivity;
-import com.example.lbw.guaniu.Story.StoryFragmentApadter;
+import com.example.lbw.guaniu.commen_view.CommenFragmentAdapter;
+import com.example.lbw.guaniu.commen_view.CommentStoryFragment;
 import com.example.lbw.guaniu.FindActivity;
 import com.example.lbw.guaniu.R;
 
@@ -57,12 +58,12 @@ public class SongActivity extends AppCompatActivity implements View.OnClickListe
         add.setOnClickListener(this);
         initCursorPos();
         fragmentList = new ArrayList<>();
-        fragmentList.add(new SongFragment());
-        fragmentList.add(new SongFragment());
-        fragmentList.add(new SongFragment());
-        fragmentList.add(new SongFragment());
+        fragmentList.add(new CommentStoryFragment());
+        fragmentList.add(new CommentStoryFragment());
+        fragmentList.add(new CommentStoryFragment());
+        fragmentList.add(new CommentStoryFragment());
         viewPager = (ViewPager)findViewById(R.id.song_view_pager);
-        StoryFragmentApadter apadter = new StoryFragmentApadter(getSupportFragmentManager(),fragmentList);
+        CommenFragmentAdapter apadter = new CommenFragmentAdapter(getSupportFragmentManager(),fragmentList);
         viewPager.setOnPageChangeListener(new SongActivity.MyPagerChangeLister());
         viewPager.setAdapter(apadter);
         game = (TextView)findViewById(R.id.game);

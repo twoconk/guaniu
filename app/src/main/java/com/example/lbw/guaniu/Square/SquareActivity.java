@@ -3,12 +3,14 @@ package com.example.lbw.guaniu.Square;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.lbw.guaniu.ActivityCollector;
 import com.example.lbw.guaniu.MusicPlayerActivity;
@@ -28,6 +30,7 @@ public class SquareActivity extends AppCompatActivity implements AdapterView.OnI
     private ImageButton squareAdd;
     private ListView listView;
     private List<Square> list;
+    private SwipeRefreshLayout swipeRefresh;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,6 +44,7 @@ public class SquareActivity extends AppCompatActivity implements AdapterView.OnI
                 finish();
             }
         });
+
         squareAdd = (ImageButton)findViewById(R.id.square_add);
         squareAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +54,17 @@ public class SquareActivity extends AppCompatActivity implements AdapterView.OnI
             }
         });
         listView = (ListView) findViewById(R.id.square_list);
+
+        swipeRefresh = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh);
+        swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                Toast.makeText(SquareActivity.this, "这是下拉刷新", Toast.LENGTH_SHORT).show();
+                swipeRefresh.setRefreshing(false);
+
+            }
+        });
+
         initData();
         SquareAdapter adapter = new SquareAdapter(this,list);
         listView.setAdapter(adapter);

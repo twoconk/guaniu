@@ -19,7 +19,8 @@ import android.widget.TextView;
 import com.example.lbw.guaniu.ActivityCollector;
 import com.example.lbw.guaniu.AddActivity;
 import com.example.lbw.guaniu.FindActivity;
-import com.example.lbw.guaniu.Poem.PoemActivity;
+import com.example.lbw.guaniu.commen_view.CommenFragmentAdapter;
+import com.example.lbw.guaniu.commen_view.CommentStoryFragment;
 import com.example.lbw.guaniu.R;
 
 import java.util.ArrayList;
@@ -53,11 +54,11 @@ public class StoryActivity extends AppCompatActivity implements View.OnClickList
         back.setOnClickListener(this);
         initCursorPos();
         fragmentList = new ArrayList<>();
-        fragmentList.add(new StoryTraditionFragment());
-        fragmentList.add(new StoryFairyFrangment());
-        fragmentList.add(new StoryCartoonFragment());
+        fragmentList.add(new CommentStoryFragment());
+        fragmentList.add(new CommentStoryFragment());
+        fragmentList.add(new CommentStoryFragment());
         viewPager = (ViewPager)findViewById(R.id.story_view_pager);
-        StoryFragmentApadter apadter = new StoryFragmentApadter(getSupportFragmentManager(),fragmentList);
+        CommenFragmentAdapter apadter = new CommenFragmentAdapter(getSupportFragmentManager(),fragmentList);
         viewPager.setOnPageChangeListener(new MyPagerChangeLister());
         viewPager.setAdapter(apadter);
         find = (ImageButton)findViewById(R.id.find_story);

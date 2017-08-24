@@ -12,6 +12,7 @@
     <color name="transparentgray">#CC666666</color>
     <color name="yellow">#ff9933</color>
     <color name="gray">#c7c7c7</color>
+    <color name="line_gray">#f7f7f7</color>
     <color name="light_blue">#5CACEE</color>
     <color name="seperate_line_color">#CCCCCC</color>
     <color name="light_gray">#87CEEB</color>

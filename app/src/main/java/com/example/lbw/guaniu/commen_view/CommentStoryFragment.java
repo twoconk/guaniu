@@ -1,19 +1,19 @@
-package com.example.lbw.guaniu.Poem;
+package com.example.lbw.guaniu.commen_view;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.lbw.guaniu.detail.DetailsActivity;
+import com.example.lbw.guaniu.Poem.Poem;
 import com.example.lbw.guaniu.R;
 
 import java.util.ArrayList;
@@ -23,10 +23,18 @@ import java.util.List;
  * Created by lbw on 2017/8/4.
  */
 
-public class PoemSongciFragment extends Fragment {
+public class CommentStoryFragment extends Fragment {
     private List<Poem> poems;
     private View view;
     private SwipeRefreshLayout swipeRefresh;
+
+    private int type;//
+    private int subType;
+
+    public void setType(int type, int subType){
+        this.type = type;
+        this.subType = subType;
+    }
 
     @Nullable
     @Override
@@ -34,9 +42,7 @@ public class PoemSongciFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_list, container, false);
         poems = new ArrayList<>();
         initStories();
-        PoemListAdapter adapter = new PoemListAdapter(getContext(), R.layout.list_item, poems);
-        ListView listView = (ListView) view.findViewById(R.id.story_tradition_list);
-        listView.setAdapter(adapter);
+
         swipeRefresh = (SwipeRefreshLayout) view.findViewById(R.id.swipe_refresh);
         swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -45,14 +51,30 @@ public class PoemSongciFragment extends Fragment {
                 refreshStory();
             }
         });
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getContext(), DetailsActivity.class);
-                startActivity(intent);
-            }
-        });
+        initRecycleView();
         return view;
+    }
+
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
+    private void initRecycleView(){
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.my_recycler_view);
+
+        // use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
+        mRecyclerView.setHasFixedSize(false);
+
+        // use a linear layout manager
+        mLayoutManager = new LinearLayoutManager(getContext());
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(getContext(),
+                DividerItemDecoration.VERTICAL));
+
+        // specify an adapter (see also next example)
+        mAdapter = new CommentListAdapter(getContext(), R.layout.list_item, poems);
+        mRecyclerView.setAdapter(mAdapter);
     }
 
     private void refreshStory() {

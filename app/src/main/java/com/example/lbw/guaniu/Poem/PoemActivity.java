@@ -20,7 +20,8 @@ import com.example.lbw.guaniu.ActivityCollector;
 import com.example.lbw.guaniu.AddActivity;
 import com.example.lbw.guaniu.FindActivity;
 import com.example.lbw.guaniu.R;
-import com.example.lbw.guaniu.Story.StoryFragmentApadter;
+import com.example.lbw.guaniu.commen_view.CommenFragmentAdapter;
+import com.example.lbw.guaniu.commen_view.CommentStoryFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,12 +54,12 @@ public class PoemActivity extends AppCompatActivity implements View.OnClickListe
         back.setOnClickListener(this);
         initCursorPos();
         fragmentList = new ArrayList<>();
-        fragmentList.add(new PoemTangshiFragment());
-        fragmentList.add(new PoemSongciFragment());
-        fragmentList.add(new PoemTraditionFragment());
-        fragmentList.add(new PoemTraditionFragment());
+        fragmentList.add(new CommentStoryFragment());
+        fragmentList.add(new CommentStoryFragment());
+        fragmentList.add(new CommentStoryFragment());
+        fragmentList.add(new CommentStoryFragment());
         viewPager = (ViewPager)findViewById(R.id.poem_view_pager);
-        StoryFragmentApadter apadter = new StoryFragmentApadter(getSupportFragmentManager(),fragmentList);
+        CommenFragmentAdapter apadter = new CommenFragmentAdapter(getSupportFragmentManager(),fragmentList);
         viewPager.setOnPageChangeListener(new PoemActivity.MyPagerChangeLister());
         viewPager.setAdapter(apadter);
         find = (ImageButton)findViewById(R.id.find_poem);
