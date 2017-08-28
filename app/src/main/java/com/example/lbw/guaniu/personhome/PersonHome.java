@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -33,6 +34,10 @@ public class PersonHome extends AppCompatActivity {
         setContentView(R.layout.activity_person_home);
         ActivityCollector.addActivity(this);
         listView = (ListView)findViewById(R.id.my_news_list);
+
+        View headerView = LayoutInflater.from(this).inflate(R.layout.header_person_layout, null,false);
+        listView.addHeaderView(headerView);
+
         initData();
         MyNewsAdapter adapter = new MyNewsAdapter(PersonHome.this,R.layout.my_news_item,list);
         listView.setAdapter(adapter);

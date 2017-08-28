@@ -34,7 +34,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="广场"
+                android:text="@string/discover_square"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:text="看看朋友们在干什么" />
+                android:text="@string/discover_square_tip" />
         </RelativeLayout>
 
         <ImageView
@@ -82,7 +82,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="帮帮团"
+                android:text="@string/discover_bbs"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -90,7 +90,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:text="互帮互助" />
+                android:text="@string/discover_bbs_tip" />
         </RelativeLayout>
 
         <ImageView

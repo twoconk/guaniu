@@ -41,6 +41,7 @@ public class HelpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
         ActivityCollector.addActivity(this);
+
         back = (LinearLayout)findViewById(R.id.back_to_square_from_help);
         back.setOnClickListener(new View.OnClickListener() {
             @Override

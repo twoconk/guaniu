@@ -23,7 +23,7 @@ import java.util.List;
  * Created by lbw on 2017/8/4.
  */
 
-public class CommentStoryFragment extends Fragment {
+public class CommenStoryFragment extends Fragment {
     private List<Poem> poems;
     private View view;
     private SwipeRefreshLayout swipeRefresh;
@@ -73,7 +73,7 @@ public class CommentStoryFragment extends Fragment {
                 DividerItemDecoration.VERTICAL));
 
         // specify an adapter (see also next example)
-        mAdapter = new CommentListAdapter(getContext(), R.layout.list_item, poems);
+        mAdapter = new CommenListAdapter(getContext(), R.layout.list_item, poems);
         mRecyclerView.setAdapter(mAdapter);
     }
 

@@ -3,4 +3,10 @@
     <string name="tab_home">首页</string>
     <string name="tab_find">发现</string>
     <string name="tab_my">我的</string>
+
+    <string name="discover_bbs">讨论组</string>
+    <string name="discover_bbs_tip">原来聊天可以这样快乐</string>
+
+    <string name="discover_square">广场秀</string>
+    <string name="discover_square_tip">看看朋友们在秀什么</string>
 </resources>

@@ -18,7 +18,7 @@ import android.widget.TextView;
 import com.example.lbw.guaniu.ActivityCollector;
 import com.example.lbw.guaniu.AddActivity;
 import com.example.lbw.guaniu.commen_view.CommenFragmentAdapter;
-import com.example.lbw.guaniu.commen_view.CommentStoryFragment;
+import com.example.lbw.guaniu.commen_view.CommenStoryFragment;
 import com.example.lbw.guaniu.FindActivity;
 import com.example.lbw.guaniu.R;
 
@@ -58,10 +58,10 @@ public class SongActivity extends AppCompatActivity implements View.OnClickListe
         add.setOnClickListener(this);
         initCursorPos();
         fragmentList = new ArrayList<>();
-        fragmentList.add(new CommentStoryFragment());
-        fragmentList.add(new CommentStoryFragment());
-        fragmentList.add(new CommentStoryFragment());
-        fragmentList.add(new CommentStoryFragment());
+        fragmentList.add(new CommenStoryFragment());
+        fragmentList.add(new CommenStoryFragment());
+        fragmentList.add(new CommenStoryFragment());
+        fragmentList.add(new CommenStoryFragment());
         viewPager = (ViewPager)findViewById(R.id.song_view_pager);
         CommenFragmentAdapter apadter = new CommenFragmentAdapter(getSupportFragmentManager(),fragmentList);
         viewPager.setOnPageChangeListener(new SongActivity.MyPagerChangeLister());

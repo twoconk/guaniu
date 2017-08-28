@@ -21,7 +21,7 @@ import com.example.lbw.guaniu.AddActivity;
 import com.example.lbw.guaniu.FindActivity;
 import com.example.lbw.guaniu.R;
 import com.example.lbw.guaniu.commen_view.CommenFragmentAdapter;
-import com.example.lbw.guaniu.commen_view.CommentStoryFragment;
+import com.example.lbw.guaniu.commen_view.CommenStoryFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,10 +54,10 @@ public class PoemActivity extends AppCompatActivity implements View.OnClickListe
         back.setOnClickListener(this);
         initCursorPos();
         fragmentList = new ArrayList<>();
-        fragmentList.add(new CommentStoryFragment());
-        fragmentList.add(new CommentStoryFragment());
-        fragmentList.add(new CommentStoryFragment());
-        fragmentList.add(new CommentStoryFragment());
+        fragmentList.add(new CommenStoryFragment());
+        fragmentList.add(new CommenStoryFragment());
+        fragmentList.add(new CommenStoryFragment());
+        fragmentList.add(new CommenStoryFragment());
         viewPager = (ViewPager)findViewById(R.id.poem_view_pager);
         CommenFragmentAdapter apadter = new CommenFragmentAdapter(getSupportFragmentManager(),fragmentList);
         viewPager.setOnPageChangeListener(new PoemActivity.MyPagerChangeLister());

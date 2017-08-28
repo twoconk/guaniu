@@ -20,7 +20,7 @@ import java.util.List;
  * Created by lbw on 2017/8/4.
  */
 
-public class CommentListAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class CommenListAdapter extends RecyclerView.Adapter<ViewHolder> {
     private List<Poem> mDataset;
     private Context context;
     private int resourceId;
@@ -28,7 +28,7 @@ public class CommentListAdapter extends RecyclerView.Adapter<ViewHolder> {
 
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public CommentListAdapter(@NonNull Context context, int resource, @NonNull List<Poem> objects) {
+    public CommenListAdapter(@NonNull Context context, int resource, @NonNull List<Poem> objects) {
         this.mDataset = objects;
         this.context = context;
         this.resourceId = resource;
