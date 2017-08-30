@@ -61,7 +61,7 @@ public class HelpDetailActivity extends AppCompatActivity {
     private void initData() {
         list = new ArrayList<>();
         HelpDetail helpDetail = new HelpDetail(R.mipmap.child4,"花开宝宝","2017/08/09 19:40","如果你不能用简洁的语言表达出它的意思,那说明你对它还不够了解" +
-        "\n" + "如果你不能用简洁的语言表达出它的意思,那说明你对它还不够了解" + "如果你不能用简洁的语言表达出它的意思,那说明你对它还不够了解" +
+                "\n" + "如果你不能用简洁的语言表达出它的意思,那说明你对它还不够了解" + "如果你不能用简洁的语言表达出它的意思,那说明你对它还不够了解" +
                 "\n" + "如果你不能用简洁的语言表达出它的意思,那说明你对它还不够了解");
         list.add(helpDetail);
         list.add(helpDetail);

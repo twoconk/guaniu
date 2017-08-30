@@ -40,8 +40,7 @@ public class MyLetterDetailActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MyLetterDetailActivity.this, SquareActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
     }

@@ -27,6 +27,7 @@
         android:layout_alignParentRight="true"
         android:visibility="gone"
         android:layout_marginTop="11dp" />
+
     <LinearLayout
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
