@@ -21,7 +21,7 @@ public class EnsureRecordActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityCollector.addActivity(this);
+        //ActivityCollector.addActivity(this);
         setContentView(R.layout.activity_ensure_record);
         text = (TextView)findViewById(R.id.ensure_record_text);
         text.setText("春晓_百度汉语" + "\n" + "作者:孟浩然" + "\n" + "春眠不觉晓,处处闻啼鸟" + "\n" + "夜来风雨声,花落知多少");
@@ -53,6 +53,6 @@ public class EnsureRecordActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ActivityCollector.remoreActivity(this);
+        //ActivityCollector.remoreActivity(this);
     }
 }

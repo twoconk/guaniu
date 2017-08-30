@@ -32,7 +32,7 @@ public class PersonHome extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_person_home);
-        ActivityCollector.addActivity(this);
+        //ActivityCollector.addActivity(this);
         listView = (ListView)findViewById(R.id.my_news_list);
 
         View headerView = LayoutInflater.from(this).inflate(R.layout.header_person_layout, null,false);
@@ -76,6 +76,6 @@ public class PersonHome extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ActivityCollector.remoreActivity(this);
+        //ActivityCollector.remoreActivity(this);
     }
 }

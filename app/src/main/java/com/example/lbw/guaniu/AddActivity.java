@@ -16,7 +16,7 @@ public class AddActivity extends AppCompatActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityCollector.addActivity(this);
+        //ActivityCollector.addActivity(this);
         setContentView(R.layout.activity_add);
         back = (LinearLayout)findViewById(R.id.back_to_square_form_add);
         back.setOnClickListener(new View.OnClickListener() {
@@ -30,6 +30,6 @@ public class AddActivity extends AppCompatActivity{
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ActivityCollector.remoreActivity(this);
+        //ActivityCollector.remoreActivity(this);
     }
 }

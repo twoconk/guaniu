@@ -15,7 +15,7 @@ public class WriteLetterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityCollector.addActivity(this);
+        //ActivityCollector.addActivity(this);
         setContentView(R.layout.activity_write_letter);
         back = (LinearLayout)findViewById(R.id.back_to_person_home);
         back.setOnClickListener(new View.OnClickListener() {
@@ -29,6 +29,6 @@ public class WriteLetterActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ActivityCollector.remoreActivity(this);
+        //ActivityCollector.remoreActivity(this);
     }
 }

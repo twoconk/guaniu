@@ -21,7 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityCollector.addActivity(this);
+        //ActivityCollector.addActivity(this);
         setContentView(R.layout.activity_login);
         back = (LinearLayout)findViewById(R.id.back_to_me_form_login);
         back.setOnClickListener(new View.OnClickListener() {
@@ -44,6 +44,6 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ActivityCollector.remoreActivity(this);
+        //ActivityCollector.remoreActivity(this);
     }
 }

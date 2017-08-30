@@ -30,7 +30,7 @@ public class MyFriendActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityCollector.addActivity(this);
+        //ActivityCollector.addActivity(this);
         setContentView(R.layout.activity_my_friend);
         initView();
         friend1.setOnClickListener(this);
@@ -61,7 +61,7 @@ public class MyFriendActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ActivityCollector.remoreActivity(this);
+        //ActivityCollector.remoreActivity(this);
     }
 
     @Override

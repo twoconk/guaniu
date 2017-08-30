@@ -49,7 +49,7 @@ public class PoemActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_poem);
-        ActivityCollector.addActivity(this);
+        //ActivityCollector.addActivity(this);
         back = (LinearLayout)findViewById(R.id.poem_back_to);
         back.setOnClickListener(this);
         initCursorPos();
@@ -79,7 +79,7 @@ public class PoemActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ActivityCollector.remoreActivity(this);
+        //ActivityCollector.remoreActivity(this);
     }
 
     private void initCursorPos() {

@@ -50,7 +50,7 @@ public class MusicActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music);
-        ActivityCollector.addActivity(this);
+        //ActivityCollector.addActivity(this);
         back = (LinearLayout)findViewById(R.id.music_back_to);
         back.setOnClickListener(this);
         initCursorPos();
@@ -80,7 +80,7 @@ public class MusicActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ActivityCollector.remoreActivity(this);
+        //ActivityCollector.remoreActivity(this);
     }
     private void initCursorPos() {
         cursor = (ImageView)findViewById(R.id.cursor_music);

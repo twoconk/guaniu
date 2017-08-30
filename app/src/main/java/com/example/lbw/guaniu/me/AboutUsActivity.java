@@ -18,7 +18,7 @@ public class AboutUsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityCollector.addActivity(this);
+        //ActivityCollector.addActivity(this);
         setContentView(R.layout.activity_about_us);
         backToMe = (LinearLayout)findViewById(R.id.back_to_me_form_about);
         backToMe.setOnClickListener(new View.OnClickListener() {
@@ -32,6 +32,6 @@ public class AboutUsActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ActivityCollector.remoreActivity(this);
+        //ActivityCollector.remoreActivity(this);
     }
 }

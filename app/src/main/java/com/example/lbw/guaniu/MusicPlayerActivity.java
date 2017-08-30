@@ -24,7 +24,7 @@ public class MusicPlayerActivity extends AppCompatActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityCollector.addActivity(this);
+        //ActivityCollector.addActivity(this);
         setContentView(R.layout.music_player);
         ImageView quit = (ImageView)findViewById(R.id.quit);
         quit.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +65,6 @@ public class MusicPlayerActivity extends AppCompatActivity{
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ActivityCollector.remoreActivity(this);
+        //ActivityCollector.remoreActivity(this);
     }
 }

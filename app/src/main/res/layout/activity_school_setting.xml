@@ -5,7 +5,6 @@
     android:orientation="vertical">
 
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal">
@@ -47,84 +46,40 @@
         android:layout_height="@dimen/line_height"
         android:background="@color/line_gray"/>
 
-    <LinearLayout
+    <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
         android:orientation="horizontal">
 
-        <LinearLayout
-            android:id="@+id/primary"
-            android:layout_width="0dp"
+        <RadioButton
+            android:id="@+id/primary_rodio"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="16dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+            android:text="小学"
+            android:textColor="#000000"
+            android:textSize="18sp" />
 
-            <RadioButton
-                android:id="@+id/primary_rodio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:focusable="false" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:text="小学"
-                android:textColor="#000000"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/junior"
-            android:layout_width="0dp"
+        <RadioButton
+            android:id="@+id/junior_rodio"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
+            android:focusable="false"
             android:layout_marginLeft="16dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/junior_rodio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:focusable="false" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:text="初中"
-                android:textColor="#000000"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/high"
-            android:layout_width="0dp"
+            android:text="初中"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+        <RadioButton
+            android:id="@+id/high_rodio"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
+            android:focusable="false"
             android:layout_marginLeft="16dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/high_rodio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:focusable="false" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:text="高中"
-                android:textColor="#000000"
-                android:textSize="18sp" />
-        </LinearLayout>
-    </LinearLayout>
+            android:text="高中"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+    </RadioGroup>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -137,18 +92,15 @@
         <Spinner
             android:id="@+id/province_spinner"
             android:layout_width="120dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:entries="@array/province">
-
         </Spinner>
 
         <Spinner
             android:id="@+id/city_spinner"
             android:layout_width="120dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:entries="@array/city">
 
         </Spinner>
@@ -156,9 +108,8 @@
         <Spinner
             android:id="@+id/district_spinner"
             android:layout_width="120dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:entries="@array/district">
 
         </Spinner>
@@ -172,6 +123,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/edit"
         android:hint="大雁塔小学"
-        android:orientation="horizontal" />
+        android:maxLines="1"
+        android:singleLine="true"/>
 
 </LinearLayout>

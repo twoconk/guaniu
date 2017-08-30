@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="province">
+        <item>陕西</item>
+        <item>湖北</item>
+        <item>北京</item>
+    </string-array>
+    <string-array name="district">
+        <item>雁塔区</item>
+        <item>高新区</item>
+        <item>长安区</item>
+    </string-array>
+    <string-array name="city">
+        <item>西安市</item>
+        <item>陕西</item>
+        <item>北京</item>
+    </string-array>
+</resources>

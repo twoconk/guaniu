@@ -40,7 +40,7 @@ public class HelpActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
-        ActivityCollector.addActivity(this);
+        //ActivityCollector.addActivity(this);
 
         back = (LinearLayout)findViewById(R.id.back_to_square_from_help);
         back.setOnClickListener(new View.OnClickListener() {
@@ -104,7 +104,7 @@ public class HelpActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ActivityCollector.remoreActivity(this);
+        //ActivityCollector.remoreActivity(this);
     }
 
     public class MyAdapter extends RecyclerView.Adapter<ViewHolder> {

@@ -15,7 +15,7 @@ public class FindActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find);
-        ActivityCollector.addActivity(this);
+        //ActivityCollector.addActivity(this);
         LinearLayout back = (LinearLayout) findViewById(R.id.back_to_home_form_find);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,6 +28,6 @@ public class FindActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ActivityCollector.remoreActivity(this);
+        //ActivityCollector.remoreActivity(this);
     }
 }

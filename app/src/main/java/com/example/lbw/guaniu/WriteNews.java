@@ -22,7 +22,7 @@ public class WriteNews extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write_news);
-        ActivityCollector.addActivity(this);
+        //ActivityCollector.addActivity(this);
         backToSquare = (ImageButton)findViewById(R.id.back_to_square);
         backToSquare.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +43,6 @@ public class WriteNews extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ActivityCollector.remoreActivity(this);
+        //ActivityCollector.remoreActivity(this);
     }
 }

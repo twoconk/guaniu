@@ -25,7 +25,7 @@ public class MuiscDetailActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music_detail);
-        ActivityCollector.addActivity(this);
+        //ActivityCollector.addActivity(this);
         back = (Button)findViewById(R.id.back_to_square_from_detail);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +50,6 @@ public class MuiscDetailActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ActivityCollector.remoreActivity(this);
+        //ActivityCollector.remoreActivity(this);
     }
 }
