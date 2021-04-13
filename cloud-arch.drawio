@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-13T02:53:33.523Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15" etag="b1UTv_egoxH90N5XPnFk" version="14.5.10" type="github">
+<mxfile host="app.diagrams.net" modified="2021-04-13T02:53:44.554Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15" etag="NGRE1cikwKGzT1QjCim_" version="14.5.10" type="github">
   <diagram id="9O8iGurEwM00Xgr4C-jm" name="Page-1">
     <mxGraphModel dx="945" dy="1844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -140,6 +140,9 @@
         </mxCell>
         <mxCell id="bdORp0koGo3pnS6SEYci-7" value="&lt;span style=&quot;font-size: 12px&quot;&gt;云密钥管理系统&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="490" y="-584" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bdORp0koGo3pnS6SEYci-8" value="&lt;font size=&quot;1&quot;&gt;KLMS服务&lt;br&gt;&lt;/font&gt;" style="aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#9673a6;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#e1d5e7;shape=mxgraph.mscae.enterprise.device" vertex="1" parent="1">
+          <mxGeometry x="530" y="-460" width="50" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
