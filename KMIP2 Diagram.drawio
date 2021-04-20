@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2021-04-20T02:01:05.936Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15" etag="CYnifqmXr9YDMjyFZVIf" version="14.6.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-04-20T02:06:17.247Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15" etag="pM1lHPB6MfEDgL5TbuUo" version="14.6.3" type="github">
   <diagram id="Ost19GGUzA_I3IMaP9q7" name="Page-1">
     <mxGraphModel dx="945" dy="1848" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="-LMuFsVPMDTjcg5neoZX-1" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="100" y="-190" width="410" height="280" as="geometry" />
+          <mxGeometry x="100" y="-240" width="690" height="330" as="geometry" />
         </mxCell>
         <mxCell id="QgCOeL-p_vlZ4WeEQOBY-24" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" parent="1" vertex="1">
           <mxGeometry x="140" y="-910" width="410" height="280" as="geometry" />
@@ -78,14 +78,35 @@
         <mxCell id="QgCOeL-p_vlZ4WeEQOBY-23" value="KLMS API服务" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="170" y="-900" width="330" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="-LMuFsVPMDTjcg5neoZX-2" value="KMIP Encoder/Decoder" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="140" y="-60" width="330" height="50" as="geometry" />
+        <mxCell id="-LMuFsVPMDTjcg5neoZX-2" value="KMIP Core (KMIP Encoder&amp;amp;Decoder）" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="-120" width="140" height="50" as="geometry" />
         </mxCell>
         <mxCell id="-LMuFsVPMDTjcg5neoZX-3" value="云密钥管理系统 SDK" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="110" y="-180" width="200" height="20" as="geometry" />
+          <mxGeometry x="110" y="-230" width="200" height="20" as="geometry" />
         </mxCell>
         <mxCell id="-LMuFsVPMDTjcg5neoZX-4" value="HTTPS/TCP" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="140" y="20" width="330" height="50" as="geometry" />
+          <mxGeometry x="300" y="20" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-LMuFsVPMDTjcg5neoZX-5" value="SDK API" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="-200" width="630" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-LMuFsVPMDTjcg5neoZX-6" value="Jsoncpp" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="-120" width="70" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-LMuFsVPMDTjcg5neoZX-7" value="curl" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="-120" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-LMuFsVPMDTjcg5neoZX-8" value="openssl" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="-50" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-LMuFsVPMDTjcg5neoZX-9" value="glog" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="-120" width="60" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-LMuFsVPMDTjcg5neoZX-10" value="libiconv" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="-120" width="60" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-LMuFsVPMDTjcg5neoZX-11" value="zlib" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="-120" width="60" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
